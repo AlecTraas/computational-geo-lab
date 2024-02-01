@@ -26,3 +26,12 @@ Planning
 * Do you think you're going to make changes to how you work? (whether on your own, how group meetings run, etc.)
 
 If you have questions for the mentors, don't hesitate to email us!
+
+## Common Meetings
+
+We will have several meetings involving all the Geometry Lab groups. Here are those dates. Please try to keep these times open, and if there's a conflict you can't avoid, let us know.
+
+* Presentations to the other groups: Fri March 1 at 3-4:30pm;
+* Meeting with Math Club and AWM: Tue Apr 2 at 5-6:30pm;
+* Farmers Market: Sat Apr 27 at 9-11am;
+* (Maybe?) Star Hill Pathways: Mon Apr 29.
