@@ -1,22 +1,30 @@
 # Anna's Portfolio
 ## Week 1 (1/31 - 2/7)
 ### Meeting Summary
-On 1.31 meeting, we discussed about the convexhull problem. The mentors introduced the problem of finding the smallest convex set by the points given(or random points). With the help of mentors, we brainstormed the first method, the gift wrapping algorithm. In general, it means 
-More detailed explaination can be found on the website here:https://en.wikipedia.org/wiki/Graham_scan
-Briefly speaking, the method can be concluded:
-1. Find the point with the lowest y-coordinate. If there's a tie, pick the one with the lowest x-coordinate. Call this point P. This is a quick step, taking O(n) time for n points.
-2. Sort the remaining points by the angle they make with P, without actually calculating the angle. Use a simple sorting method (like heapsort, O(n log n)) and a function related to the angle. If two points have the same angle, keep the one that's farther from P.
-3. Go through the sorted points one by one, checking if can make a left or right turn from the last point. If it's a right turn, the point before isn't on the hull. Keep checking and removing points that lead to right turns. Use basic math to check turns without needing angles.
-4. Continue until loop back to P. Now, you have the points that make up the hull in counterclockwise order. This step sorts out which points are on the outer edge (convex hull) and leaves out the ones inside.
-Mentors also mentioned
+On January 31, we explored the convex hull problem, aiming to find the smallest convex polygon enclosing a set of points, guided by mentors who introduced us to the gift wrapping algorithm as our initial solution approach. This algorithm iteratively selects the most counterclockwise points to construct the hull, detailed further on Wikipedia's Graham Scan Algorithm page.
+Briefly speaking, the gift wrapping method can be concluded as:
+1. **Find the point with the lowest y-coordinate.**:  If there's a tie, pick the one with the lowest x-coordinate. Call this point P. This is a quick step, taking O(n) time for n points.
+2. **Sort the remaining points by the angle they make with P**: Use a simple sorting method (like heapsort, O(n log n)) and a function related to the angle. If two points have the same angle, keep the one that's farther from P.
+3. **Go through the sorted points**: Go through the sorted points one by one, checking if can make a left or right turn from the last point. If it's a right turn, the point before isn't on the hull. Keep checking and removing points that lead to right turns. Use basic math to check turns without needing angles.
+4. **Continue until loop back to P**:  Now, with the points that make up the hull in counterclockwise order, this step sorts out which points are on the outer edge (convex hull) and leaves out the ones inside.
 
-### Codes down right now 
+Additionally, our mentors introduced the QuickHull algorithm, a method that calculates the convex hull of a point set by recursively finding and removing points within the boundaries created by extreme points. It begins with the points of minimum and maximum x-coordinates, segments the set, identifies the farthest point from each segment to establish new boundaries, and continues this process to discard points not on the hull. This divide-and-conquer strategy effectively isolates the outermost points that define the convex polygon enclosing the entire set.
 
 
+### Progress 
+Over past week, I had a thorough review of the literature pertaining to the two algorithms previously discussed, ultimately electing to concentrate my efforts on the QuickHull algorithm.
+
+The methodology employed in my implementation of the QuickHull algorithm can be summarized as follows:
+
+1. **Initialization**: Start with an empty set for the convex hull.
+2. **Identifying Extremal Points**: Find and add the leftmost and rightmost points (A and B) to the convex hull.
+3. **Partitioning the Point Set**: Divide the remaining points into two subsets based on their location relative to the line AB.
+4. **Recursive Hull Construction**: Use the `FindHull` function to recursively find and add the farthest point from each subset to the convex hull, effectively identifying all points that form the outer boundary.
+
+### Problems
+1. In my initial attempt using the notebook test_anna01.ipynb, only the plots of selected points were visible, while those that were eliminated didn't appear on the graph.
+2. The points it identified seem correct to me. However, the way the lines were drawn appeared weird.
+3. I attempted to execute the code from the following URL: https://github.com/zifanw/ConvexHull2D/blob/master/ConvexHull.py, aiming to replicate the code and verify its functionality. I have documented the code in notebook test_anna02.ipynb. Unfortunately, there are some errors from execution.
 
 
 
-## The problem I faced now:
-
-
-https://github.com/zifanw/ConvexHull2D/blob/master/ConvexHull.py
