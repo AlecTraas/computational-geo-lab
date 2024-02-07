@@ -6,23 +6,13 @@ Today is 2/3, and I've completed my lightly-debugged, unoptimized first draft of
 
 Today is 2/6, and I have fully completed an unoptimized, rather messy implementation of the 2d quickhull algorithm. Yesterday I was able to get my code into an error-free state, though the output was always incorrect. Here are a couple output sets I got in the form of `X|Y` tables:
 
-x|y
--|-
-inf|inf
-inf|inf
-5.8942|2.2572
-None|None
-1.2945|4.8593
-
-*and* 
-
-x|y
--|-
-0|0
-0|0
-None|None
-None|None
-0|0
+x|y|*and*|x|y
+-|-|-|-|-
+inf|inf|-|0|0
+inf|inf|-|0|0
+5.8942|2.2572|-|None|None
+None|None|-|None|None
+1.2945|4.8593|-|0|0
 
 Clearly, these are not the types of results I was looking for. I scowered my code and found few issues, essentially hitting a brick wall in my progress. Today, I thought I would turn to graphing values myself, and walking through the algorithm in a test scenario. I set up a test case for the section of the code which determines if a point is within a triangle, and I used [Desmos](https://www.desmos.com/calculator) to visually graph the results. What I found is that I was incorrectly determining which points lie outside the triangle formed by `A`,`B`,and `P`:
 
