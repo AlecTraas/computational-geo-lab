@@ -30,5 +30,7 @@ Clearly, these are not the types of results I was looking for. I scowered my cod
 
 ## Week 2 (2/7 - 2/14)
 helpful papers for high-dimensional convex hull algorithms:
+
 [The Quickhull algorithm for Convex Hulls](https://dpd.cs.princeton.edu/Papers/BarberDobkinHuhdanpaa.pdf)
+
 [Visualizing High-Dimensional Data: Advances in the Past Decade](https://www.sci.utah.edu/~beiwang/publications/Vis_HD_STAR_BeiWang_2015.pdf)
