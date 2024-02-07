@@ -1,6 +1,6 @@
 # Anna's Portfolio
 ## Week 1 (1/31 - 2/7)
-### Meeting Summary
+### Meeting Recap
 On January 31, we explored the convex hull problem, aiming to find the smallest convex polygon enclosing a set of points, guided by mentors who introduced us to the gift wrapping algorithm as our initial solution approach. This algorithm iteratively selects the most counterclockwise points to construct the hull, detailed further on Wikipedia's Graham Scan Algorithm page.
 Briefly speaking, the gift wrapping method can be concluded as:
 1. **Find the point with the lowest y-coordinate.**:  If there's a tie, pick the one with the lowest x-coordinate. Call this point P. This is a quick step, taking O(n) time for n points.
