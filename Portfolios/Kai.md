@@ -18,6 +18,28 @@ Clearly, these are not the types of results I was looking for. I scowered my cod
 
 <img src="https://i2.paste.pics/ea2bf739d8c7f4ecdb1245eb1436e815.png?trs=dd494636c42af34438770bca22294014fd61ebd0cb110405d73f174c77ec4014&rand=ZBPwnrNO5A"  width="40%" height="20%">
 
+With my newly corrected convex hull-generating program completed, I wondered if, by computing the convex hull for a large number of sets at varying point quantities, I could computationally approach the answer to the following question:
+> What is the probability, for a set of 2d points, that a randomly-selected point lies on the convex hull of the aforementioned set?
+I, therefore, mocked up a quick test:
+```
+def check_and_increment_counter(hull_set, points):
+    for point in hull_set:
+        if np.array_equal(point, points[rnd.randint(0, len(points)-1)]):
+            return 1
+    return 0
+
+counter = 0.0
+for i in range(1,100000):
+  hull_set, points = runProgram(10)
+  counter += check_and_increment_counter(hull_set, points)
+print(counter/100000)
+```
+This returned $0.52117$, or roughly $52\\%$. How interesting! I took the results for a few other sets of  points as well (at a smaller sample size of $20,000$), and plotted the results on Desmos:
+
+<img src="https://i2.paste.pics/94777b07a88ae52ed062238be1914680.png?trs=dd494636c42af34438770bca22294014fd61ebd0cb110405d73f174c77ec4014&rand=nyIaKF0b3q"  width="40%" height="20%">
+
+Though there is quite a bit of deviance from the true, expected values one would achieve by hand, I believe this plot gives us a decent understanding of how the ratio of convex hull points to set size approaches roughly $19:50$. That is, as the number of points in our set grows to infinity, the percentage of points in the convex hull approaches about $38\\%$. I would, however, like to see if one of the more educated members of the Geometry Lab could calculate the exact percentage approached.
+
 ## Week 2 (2/7 - 2/14)
 helpful papers for high-dimensional convex hull algorithms:
 
