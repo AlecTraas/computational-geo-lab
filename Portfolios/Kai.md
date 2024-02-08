@@ -38,7 +38,7 @@ This returned $0.52117$, or roughly $52\\%$. How interesting! I took the results
 
 <img src="https://i2.paste.pics/94777b07a88ae52ed062238be1914680.png?trs=dd494636c42af34438770bca22294014fd61ebd0cb110405d73f174c77ec4014&rand=nyIaKF0b3q"  width="40%" height="20%">
 
-Though there is quite a bit of deviance from the true, expected values one would achieve by hand, I believe this plot gives us a decent understanding of how the ratio of convex hull points to set size approaches roughly $19:50$. That is, as the number of points in our set grows to infinity, the percentage of points in the convex hull approaches about $38\\%$. I would, however, like to see if one of the more educated members of the Geometry Lab could calculate the exact percentage approached.
+**NEVERMIND, MY RESULTS ARE COMPLETE GARBAGE. I WILL RECALCULATE THEM IN THE MORNING**Though there is quite a bit of deviance from the true, expected values one would achieve by hand, I believe this plot gives us a decent understanding of how the ratio of convex hull points to set size approaches roughly $19:50$. That is, as the number of points in our set grows to infinity, the percentage of points in the convex hull approaches about $38\\%$. I would, however, like to see if one of the more educated members of the Geometry Lab could calculate the exact percentage approached.
 
 ## Week 2 (2/7 - 2/14)
 helpful papers for high-dimensional convex hull algorithms:
