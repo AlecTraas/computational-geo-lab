@@ -36,9 +36,11 @@ print(counter/100000)
 ```
 This returned $0.52117$, or roughly $52\\%$. How interesting! I took the results for a few other sets of  points as well (at a smaller sample size of $20,000$), and plotted the results on Desmos:
 
-<img src="https://i2.paste.pics/94777b07a88ae52ed062238be1914680.png?trs=dd494636c42af34438770bca22294014fd61ebd0cb110405d73f174c77ec4014&rand=nyIaKF0b3q"  width="40%" height="20%">
+<img src="https://i2.paste.pics/7a36ed782aafb0ebeb7978fedfda9853.png?trs=dd494636c42af34438770bca22294014fd61ebd0cb110405d73f174c77ec4014&rand=NucjU38SZf"  width="80%" height="60%">
 
-**NEVERMIND, MY RESULTS ARE COMPLETE GARBAGE. I WILL RECALCULATE THEM IN THE MORNING**Though there is quite a bit of deviance from the true, expected values one would achieve by hand, I believe this plot gives us a decent understanding of how the ratio of convex hull points to set size approaches roughly $19:50$. That is, as the number of points in our set grows to infinity, the percentage of points in the convex hull approaches about $38\\%$. I would, however, like to see if one of the more educated members of the Geometry Lab could calculate the exact percentage approached.
+Though there is a bit of deviance from the true, expected values one would achieve by hand, I believe this plot makes a decent amount of sense. As the number of points grows to infinity, we can expect 
+$$\lim_{x\to\infty} \frac{a}{bx^c} \to 0$$
+Essentially, the size of the convex hull doesn't grow fast enough to keep up pace with the set of points it is derived from.
 
 ## Week 2 (2/7 - 2/14)
 helpful papers for high-dimensional convex hull algorithms:
