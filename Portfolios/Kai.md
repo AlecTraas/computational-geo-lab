@@ -38,7 +38,7 @@ This returned $0.52117$, or roughly $52\\%$. How interesting! I took the results
 
 <img src="https://i2.paste.pics/7a36ed782aafb0ebeb7978fedfda9853.png?trs=dd494636c42af34438770bca22294014fd61ebd0cb110405d73f174c77ec4014&rand=NucjU38SZf"  width="80%" height="60%">
 
-Though there is a bit of deviance from the true, expected values one would achieve by hand, I believe this plot makes a decent amount of sense. As the number of points grows to infinity, we can expect 
+**ALL THIS IS WRONG (again). There was an issue in my code with duplicate points, so these numbers are entirely wrong. I will fix in an hour or two**Though there is a bit of deviance from the true, expected values one would achieve by hand, I believe this plot makes a decent amount of sense. As the number of points grows to infinity, we can expect 
 $$\lim_{x\to\infty} \frac{a}{x^b} \to 0$$
 Essentially, the size of the convex hull doesn't grow fast enough to keep up pace with the set of points it is derived from.
 
