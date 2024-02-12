@@ -9,3 +9,15 @@ A specifically intriguing idea was to construct a line parallel to the x-axis, p
 We also discussed universal edge cases, such as if all the points are collinear. In this case, the parallel line idea would be efficient, with a time complexity of O(n) and the convex hull would look like a line joining all the points. Another edge case was the case of an array of length 3, which would form a triangle in all cases. We decided the most efficient way to deal with this would be include an if statement to check if the length of an array was 3, then check if the points were collinear, and return either a line or a triangle. 
 
 Before meeting next week, I will be looking at possible ways we could actually code the most efficient algorithm we discussed, Quick Hull, or at least write some pseudocode and research packages that could easier allow me to compute the shortest distance between a point and a line. Currently, I'm thinking defining a function that computes the shortest distance between points using vector dot products might be the best way to approach that particular problem. 
+
+## Week 2 (2/8-2/14)
+2/12/2024
+
+This week, we explored the different algorithms we had each decided to explore to instruct a computer to spit out a convex hull when given an array of points. I chose a modified-gift wrapping algorithm. In essence, this algorithm starts at the leftmost point of the set, which has to be a part of the convex hull, separates all the other points into two sets, upper and lower, and finds the next hullpoint that is above it. We now find all points above this new hullpoint, and find the next point by finding the least angle between the vertical line passing through the original hullpoint and the vertical line passing through the point p. We repeat the procedure until we hit the topmost point, which must also be in the hullset. 
+Then, we switch the procedure, now moving downward from the leftmost point, following the same procedure, until we hit the lowest point, which must also be in the hullset. 
+We then switch over to the rightmost point, and go through the same loop, until we hit the bottom and top point again. At that point, our hullset is complete. This algorithm would be more efficient than normal gift-wrapping, since it essentially, on average, eliminates half the points needed to be analyzed every time we find a new hull point, even though it runs through four loops. 
+I spent time this week getting familiar with numpy and pandas, since I have rarely used them before, and developing some pseudo and rough code, pictures of which I have attached at the bottom. Before meeting next week, I hope to continue to move toward a fully finished gift-wrapping 2.0 algorithm. 
+
+![Screenshot (46)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/7431221b-5775-41f9-873c-3f0b87cd9915)
+![Screenshot (45)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/77feec8b-8cf6-4fd9-a969-25f3499b4b05)
+![Screenshot (44)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/ae2978ac-290f-409b-a90b-25b32fa726cb)
