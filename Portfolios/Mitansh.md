@@ -18,6 +18,3 @@ Then, we switch the procedure, now moving downward from the leftmost point, foll
 We then switch over to the rightmost point, and go through the same loop, until we hit the bottom and top point again. At that point, our hullset is complete. This algorithm would be more efficient than normal gift-wrapping, since it essentially, on average, eliminates half the points needed to be analyzed every time we find a new hull point, even though it runs through four loops. 
 I spent time this week getting familiar with numpy and pandas, since I have rarely used them before, and developing some pseudo and rough code, pictures of which I have attached at the bottom. Before meeting next week, I hope to continue to move toward a fully finished gift-wrapping 2.0 algorithm. 
 
-![Screenshot (46)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/7431221b-5775-41f9-873c-3f0b87cd9915)
-![Screenshot (45)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/77feec8b-8cf6-4fd9-a969-25f3499b4b05)
-![Screenshot (44)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/ae2978ac-290f-409b-a90b-25b32fa726cb)
