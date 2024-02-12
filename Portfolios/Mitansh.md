@@ -14,7 +14,14 @@ Before meeting next week, I will be looking at possible ways we could actually c
 2/12/2024
 
 This week, we explored the different algorithms we had each decided to explore to instruct a computer to spit out a convex hull when given an array of points. I chose a modified-gift wrapping algorithm. In essence, this algorithm starts at the leftmost point of the set, which has to be a part of the convex hull, separates all the other points into two sets, upper and lower, and finds the next hullpoint that is above it. We now find all points above this new hullpoint, and find the next point by finding the least angle between the vertical line passing through the original hullpoint and the vertical line passing through the point p. We repeat the procedure until we hit the topmost point, which must also be in the hullset. 
+
 Then, we switch the procedure, now moving downward from the leftmost point, following the same procedure, until we hit the lowest point, which must also be in the hullset. 
+
 We then switch over to the rightmost point, and go through the same loop, until we hit the bottom and top point again. At that point, our hullset is complete. This algorithm would be more efficient than normal gift-wrapping, since it essentially, on average, eliminates half the points needed to be analyzed every time we find a new hull point, even though it runs through four loops. 
+
 I spent time this week getting familiar with numpy and pandas, since I have rarely used them before, and developing some pseudo and rough code, pictures of which I have attached at the bottom. Before meeting next week, I hope to continue to move toward a fully finished gift-wrapping 2.0 algorithm. 
+
+![Screenshot (46)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/3f2e9c3f-27a6-413b-86fd-314bc986e0f2)
+![Screenshot (45)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/b5be7180-f8d6-4536-be73-71cdacb718a8)
+![Screenshot (44)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/5a974d33-3889-4223-8ba9-a1d6614235b3)
 
