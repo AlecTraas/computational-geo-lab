@@ -9,7 +9,8 @@
 
 
 ## Week 2 (2/7 - 2/14)
-![Graham Scan](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/ea8bcb7a-efc4-4a68-a22f-02b30718db34)
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/bc68f009-f845-4b78-890a-7b67f03e1d55)
+
 
 During our meeting on the 7th, we discussed further about our algorithms to find the convex hull given a set of points. Rather than focusing on the conceptual formation of our algorithms, we dove more into the nitty gritty coding side of our algorithms. Prior to the meeting, I was searching online for other possible convex hull algorithms I could implement that were also efficient at the same time. This led me down the rabbit hole to finding the graham scan algorithm, which uses the orientation [(link)](https://www.geeksforgeeks.org/orientation-3-ordered-points/) of an ordered set of 3 points to determine if a point is on the hull or not. I found this idea of orientation also much easier to apply in the context of our problem as a test for points on our hull as well, as this characteristic only required two other points to make a relative measuring. 
 
