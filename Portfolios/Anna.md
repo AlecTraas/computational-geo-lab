@@ -25,6 +25,18 @@ The methodology employed in my implementation of the QuickHull algorithm can be 
 1. In my initial attempt using the notebook test_anna01.ipynb, only the plots of selected points were visible, while those that were eliminated didn't appear on the graph.
 2. The points it identified seem correct to me. However, the way the lines were drawn appeared weird.
 3. I attempted to execute the code from the following URL: https://github.com/zifanw/ConvexHull2D/blob/master/ConvexHull.py, aiming to replicate the code and verify its functionality. I have documented the code in notebook test_anna02.ipynb. Unfortunately, there are some errors from execution.
+   
+
+## Week 2 (2/7 - 2/14)
+### Meeting Recap
+In Wednesday's meeting, I have the graph look like this during the meeting.
+<img width="1470" alt="截屏2024-02-14 下午2 00 53" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/a70b92a0-c895-44f8-b359-3cb2be27b840">
+
+
+### Progress 
+
+### Reflection and Planning 
+
 
 
 
