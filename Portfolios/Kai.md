@@ -43,6 +43,12 @@ $$\lim_{x\to\infty} \frac{a}{x^b} \to 0$$
 Essentially, the size of the convex hull doesn't grow fast enough to keep up pace with the set of points it is derived from.
 
 ## Week 2 (2/7 - 2/14)
+During our last meeting, we worked on fixing our 2d convex hull code and we discussed the algorithm we would use for 3d quickhull and, eventually, arbitrary-dimension quickhull. As I understand it, the algorithm is as follows:
+```
+
+```
+
+## Week 3 (2/14 - 2/21)
 helpful papers for high-dimensional convex hull algorithms:
 
 [The Quickhull algorithm for Convex Hulls](https://dpd.cs.princeton.edu/Papers/BarberDobkinHuhdanpaa.pdf)
