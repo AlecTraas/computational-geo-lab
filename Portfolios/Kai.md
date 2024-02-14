@@ -58,7 +58,45 @@ During our last meeting, we worked on fixing our 2d convex hull code and we disc
 
 // Repeat 4 until no facet has points above
 ```
-This week I have attempted to implement this algorithm for the 3d case. I began by researching classes in Python, as I thought an [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) approach would suit this algorithm best because of how many interlinked arrays and lists need to be created and stored. 
+This week I have attempted to implement this algorithm for the 3d case. I began by researching classes in Python, as I thought an [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) approach would suit this algorithm best because of how many interlinked arrays and lists need to be created and stored. Most of the time I spent working on the program this week was spent building out and debugging the `define_tetrahedron()` function:
+
+##### Preliminary Pseudocode
+In order to effectively and cleanly write the function, I started with a [pseudocode](https://en.wikipedia.org/wiki/Pseudocode) description. I decided to forgo a conventional, code-adjacent style of pseudocode, instead opting for a more plain language, bullet-pointed syntax.
+##### Basic Functionality
+Following my completion of pseudocode, I wrote the function in Python, taking little time to check the correctness of my code. Thankfully, it was entirely functional besides one persistant bug in my code.
+##### Coding Headache
+I consistantly faced one issue in my programming of the `define_tetrahedron()` function: duplicate point selection. Patricularly in low point-count cases, my function would often select the same point as its pick for two of the tetrahedron's vertices. This obviously caused issues, as in such cases a triangle or nothing at all would be outputted as opposed to a complete tetrahedron. In the end, my solution was as follows: 
+
+I went from this
+```
+i = [self.points[:,0].argmin(),
+    self.points[:,1].argmin(),
+    self.points[:,2].argmin(),
+    self.points[:,1].argmax()]
+```
+to this
+```
+temp = np.array(self.points)
+
+i = []
+k = temp[:,0].argmin()
+i.append(k)
+temp[k] = np.inf
+k = temp[:,1].argmin()
+i.append(k)
+temp[k] = np.inf
+k = temp[:,2].argmin()
+i.append(k)
+temp[temp == np.inf] = -np.inf
+temp[k] = -np.inf
+k = temp[:,1].argmax()
+i.append(k)
+```
+
+The bug, simply put, stemmed from having no duplicate regulation whatsoever. By allowing for a second temporary array that can be edited, we maintain correct indices in the `i` array. Similarly, the act of setting the points in temp to `np.inf` or `-np.inf` after selection allows us to ignore the selected points without changing the indecies of the rest of the points.
+##### Belated Completion
+
+Though I didn't seem to get much work done on the program this week, I hope that in the next I may complete it once and for all.
 
 ## Week 3 (2/14 - 2/21)
 helpful papers for high-dimensional convex hull algorithms:
