@@ -30,12 +30,28 @@ The methodology employed in my implementation of the QuickHull algorithm can be 
 ## Week 2 (2/7 - 2/14)
 ### Meeting Recap
 In Wednesday's meeting, I have the graph look like this during the meeting.
-<img width="1470" alt="截屏2024-02-14 下午2 00 53" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/a70b92a0-c895-44f8-b359-3cb2be27b840">
-
+![image1](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/810c3465-e5f9-4c79-87e5-4479f919504e)
+During the discussion, we explored ways to enhance the functionality of the graph. Two main ideas were suggested. The first suggestion involved adding additional code after the original algorithm to sort the convex hull points. This would involve connecting the leftmost and rightmost points and using this line to divide the set of points. Points on the upper side would be connected from left to right, and those on the lower side from right to left. The alternative method proposed embedding the sorting process directly into the original code. Given that sorting and dividing are integral to the QuickHull method, integrating graphing functionalities at this stage seemed feasible.
 
 ### Progress 
+From the start, I tried to code the connections for the upper and lower sides. In the process, I digged deeper into the syntax and functionalities of Matplotlib and learned more about slicing techniques. However, the outcomes were not as satisfactory as I had hoped.
+![image2](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/48d08a1f-9621-4122-9c3f-05d08cd2c9e2)
+
+I realized I wanted the convex hull to be depicted in a single color, along with the inclusion of the original input points on the graph. After further learning of Matplotlib, I had the following graph:
+![image3](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/0c07d2f0-e10c-484b-a3e5-09f7cd063a8c)
+
+This graph contains all the points I had put, and generates the smallest convex set in two dimensions.
 
 ### Reflection and Planning 
+
+Incorporating random points as input could enhance the testing of the algorithm's characteristics. However, my familiarity with the use of random functions and their generation is limited. Thus, I decided to maintain the current code and graphical output for the time being.
+
+In the upcoming week, I will explore whether it's feasible to incorporate randomness into the dataset to create a more diverse set of input points. Alternatively, I may discuss with my group the possibility of shifting our focus from a two-dimensional to a three-dimensional approach.
+
+
+
+
+
 
 
 
