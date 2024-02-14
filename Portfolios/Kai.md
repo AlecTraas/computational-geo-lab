@@ -45,8 +45,20 @@ Essentially, the size of the convex hull doesn't grow fast enough to keep up pac
 ## Week 2 (2/7 - 2/14)
 During our last meeting, we worked on fixing our 2d convex hull code and we discussed the algorithm we would use for 3d quickhull and, eventually, arbitrary-dimension quickhull. As I understand it, the algorithm is as follows:
 ```
+// For a d-dimensional set of points:
 
+1. Generate a polygon with d-1 points and facets
+2. Remove points within the polygon
+3. Assign each point to the facet it is above
+4. For each facet that has points above it:
+    4.1. Find the furthest point above the facet
+    4.2. Find the horizon ridges for that point
+    4.3. Connect the point to its horizon
+    4.4. Remove the now internal facets and points
+
+// Repeat 4 until no facet has points above
 ```
+This week I have attempted to implement this algorithm for the 3d case. I began by researching classes in Python, as I thought an [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) approach would suit this algorithm best because of how many interlinked arrays and lists need to be created and stored. 
 
 ## Week 3 (2/14 - 2/21)
 helpful papers for high-dimensional convex hull algorithms:
