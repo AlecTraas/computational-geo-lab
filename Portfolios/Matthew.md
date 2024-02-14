@@ -15,8 +15,8 @@ During our meeting on the 7th, we discussed further about our algorithms to find
 
 When implementing the graham scan algorithm, I found the process of iterating through points to be pretty straightforward. First, I had to start with the point with the lowest y-value (the anchor point), and then measure the polar angle made between all other points and the anchor point. I then sort the points by this polar angle from smallest angle to greatest for the algorithm to then iterate through to test orientability. Here, it is important to understand in terms of orientation, we want any 3 consecutive points on our convex hull to have counterclockwise orientation. That way, when iterating through points, the convex hull is able to form lines between hull points in counterclockwise order moving through the points sorted from smallest angle to greatest. The algorithm would then iterate through each point and check if the orientation of the next point formed a counterclockwise turn, thus slowly wrapping around the entire convex hull.
 
-I found my generated plots of this also turned out pretty well:
+I found my generated plots of this also turned out pretty well using a set of 100 randomly generated points:
 
 ![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/bc68f009-f845-4b78-890a-7b67f03e1d55)
 
-
+While this seems to work as a general solution, I am unsure of how edge cases would hold up in the algorithm I've coded. In the future, I hope to dive more in depth into edge cases that dive into collinearity between points.
