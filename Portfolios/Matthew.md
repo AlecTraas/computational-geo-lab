@@ -9,9 +9,14 @@
 
 
 ## Week 2 (2/7 - 2/14)
-![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/bc68f009-f845-4b78-890a-7b67f03e1d55)
 
 
 During our meeting on the 7th, we discussed further about our algorithms to find the convex hull given a set of points. Rather than focusing on the conceptual formation of our algorithms, we dove more into the nitty gritty coding side of our algorithms. Prior to the meeting, I was searching online for other possible convex hull algorithms I could implement that were also efficient at the same time. This led me down the rabbit hole to finding the graham scan algorithm, which uses the orientation [(link)](https://www.geeksforgeeks.org/orientation-3-ordered-points/) of an ordered set of 3 points to determine if a point is on the hull or not. I found this idea of orientation also much easier to apply in the context of our problem as a test for points on our hull as well, as this characteristic only required two other points to make a relative measuring. 
 
-When implementing the graham scan algorithm, I found the process of iterating through points to be pretty straightforward. First, I had to start with the point with the lowest y-value (the anchor point), and then measure the polar angle made between all other points and the anchor point. I then sort the points by this polar angle from smallest angle to greatest for the algorithm to then iterate through to test orientability. Here, it is important to understand in terms of orientation, we want any 3 consecutive points on our convex hull to have counterclockwise orientation. That way, when iterating through points, the convex hull is able to form lines between hull points in counterclockwise order moving through the points sorted from smallest angle to greatest. 
+When implementing the graham scan algorithm, I found the process of iterating through points to be pretty straightforward. First, I had to start with the point with the lowest y-value (the anchor point), and then measure the polar angle made between all other points and the anchor point. I then sort the points by this polar angle from smallest angle to greatest for the algorithm to then iterate through to test orientability. Here, it is important to understand in terms of orientation, we want any 3 consecutive points on our convex hull to have counterclockwise orientation. That way, when iterating through points, the convex hull is able to form lines between hull points in counterclockwise order moving through the points sorted from smallest angle to greatest. The algorithm would then iterate through each point and check if the orientation of the next point formed a counterclockwise turn, thus slowly wrapping around the entire convex hull.
+
+I found my generated plots of this also turned out pretty well:
+
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/bc68f009-f845-4b78-890a-7b67f03e1d55)
+
+
