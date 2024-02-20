@@ -20,3 +20,5 @@ I found my generated plots of this also turned out pretty well using a set of 10
 ![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/bc68f009-f845-4b78-890a-7b67f03e1d55)
 
 While this seems to work as a general solution, I am unsure of how edge cases would hold up in the algorithm I've coded. In the future, I hope to dive more in depth into edge cases that dive into collinearity between points.
+
+## Week 3 (2/14 - 2/21)
