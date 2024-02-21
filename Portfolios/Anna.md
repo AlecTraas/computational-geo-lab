@@ -52,18 +52,19 @@ In the upcoming week, I will explore whether it's feasible to incorporate random
 
 ## Week 3 (2/14 - 2/21)
 ### Meeting Recap
-With Lam's help, I learned how to use the random function and wrapped up my work in convexhull.
-Here is the final graph.
+With Lam's assistance, I learned how to use the random function and completed my work on the convex hull. Here is the final graph.
 
 ![5681708531544_ pic](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/fbf2d042-e329-46b0-9490-62c7a901ce69)
 
-The mentor's introduce the Delaunay triangulations and Voronoi diagram, and we decided it would be the next period we would work on. Next Tuesday, we would have a group presentation over other geometry group and we would work on the presentation.
+The mentors introduced the concepts of Delaunay triangulations and Voronoi diagrams, and we decided that these would be our focus for the next period. Next Tuesday, we will have a group presentation in front of another geometry group, during which we will discuss our work. Essentially, we'll still focus on the 2D convex hull and the different algorithms we used in the presentation, including the animation.
 
 ### Progress 
 
+I have read several materials to get a clue on how to start with Delaunay triangulation. A helpful resource I found is https://www.cs.princeton.edu/courses/archive/spring12/cos423/bib/vor.pdf. I have read through the different algorithms introduced here, and during spring week, I could possibly start working on the sweeping line algorithm. Also, Delaunay triangulation can finally produce a great graph like this:
 
+![5691708533565_ pic](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/ed383de8-8647-4982-9ff9-0ec06a72f32e)
 
-
+I believe this graph will be beneficial for future presentations and provide a fundamental understanding of computational geometry.
 
 
 
