@@ -64,7 +64,7 @@ I have read several materials to get a clue on how to start with Delaunay triang
 
 ![5691708533565_ pic](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/ed383de8-8647-4982-9ff9-0ec06a72f32e)
 
-I believe this graph will be beneficial for future presentations and provide a fundamental understanding of computational geometry.
+I believe this graph will be beneficial for future presentations and provide a basic understanding of computational geometry.
 
 
 
