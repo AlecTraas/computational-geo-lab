@@ -57,20 +57,9 @@ Here is the final graph.
 
 ![5681708531544_ pic](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/fbf2d042-e329-46b0-9490-62c7a901ce69)
 
+The mentor's introduce the Delaunay triangulations and Voronoi diagram, and we decided it would be the next period we would work on. Next Tuesday, we would have a group presentation over other geometry group and we would work on the presentation.
+
 ### Progress 
-From the start, I tried to code the connections for the upper and lower sides. In the process, I digged deeper into the syntax and functionalities of Matplotlib and learned more about slicing techniques. However, the outcomes were not as satisfactory as I had hoped.
-![image2](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/48d08a1f-9621-4122-9c3f-05d08cd2c9e2)
-
-I realized I wanted the convex hull to be depicted in a single color, along with the inclusion of the original input points on the graph. After further learning of Matplotlib, I had the following graph:
-![image3](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/0c07d2f0-e10c-484b-a3e5-09f7cd063a8c)
-
-This graph contains all the points I had put, and generates the smallest convex set in two dimensions.
-
-### Reflection and Planning 
-
-Incorporating random points as input could enhance the testing of the algorithm's characteristics. However, my familiarity with the use of random functions and their generation is limited. Thus, I decided to maintain the current code and graphical output for the time being.
-
-In the upcoming week, I will explore whether it's feasible to incorporate randomness into the dataset to create a more diverse set of input points. Alternatively, I may discuss with my group the possibility of shifting our focus from a two-dimensional to a three-dimensional approach.
 
 
 
