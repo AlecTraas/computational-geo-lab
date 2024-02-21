@@ -22,6 +22,7 @@ I found my generated plots of this also turned out pretty well using a set of 10
 While this seems to work as a general solution, I am unsure of how edge cases would hold up in the algorithm I've coded. In the future, I hope to dive more in depth into edge cases that dive into collinearity between points.
 
 ## Week 3 (2/14 - 2/21)
+During our meeting on the 14th, we pivoted away from our previous discussion on convex hulls to focus on the topics of Delaunay triangulations and Voronoi diagrams.
 
 During our meeting on the 20th, we began to develop our presentation for the group meeting on the 27th. We decided we were going to mainly focus on our work surrounding the convex hull. As for the structure and content of the presentation, we decided on including an introduction to the concept of a convex hull, the algorithms each of us worked on and a high level look at how each algorithm works, as well as applications of the convex hull. For our presentation, we want to focus on visual aids and diagrams to hopefully make our work intuitive and easy to understand for our audience. Overall, I found this meeting to be really productive in setting up the overall structure and establishing what each group member was going to focus on and work on to finalize for the 27th.
 
