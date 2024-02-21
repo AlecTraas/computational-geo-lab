@@ -99,8 +99,24 @@ The bug, simply put, stemmed from having no duplicate regulation whatsoever. By 
 Though I didn't seem to get much work done on the program this week, I hope that in the next I may complete it once and for all.
 
 ## Week 3 (2/14 - 2/21)
-helpful papers for high-dimensional convex hull algorithms:
+In this week's group meeting, we discussed the future of our subgroup, and what direction we will go in with future projects. As a natural successor to the convex hull, we began conversation about [Voronoi Diagrams](https://en.wikipedia.org/wiki/Voronoi_diagram) and [Delaunay Triangulation](https://en.wikipedia.org/wiki/Delaunay_triangulation), with Lam presenting resources for us to futher research these on our own. As we spoke about capstone projects to begin after Spring break, the idea of computing the convex hull in [Hyperbolic space](https://en.wikipedia.org/wiki/Hyperbolic_space) particularly caught my attention, as I've been trying to find an excuse to program a non-euclidean renderer for quite some time. That said, I have to admit that the convex hull intimidates me, as I'm already finding it relatively challenging to program the 3d Quickhull algorithm.
 
-[The Quickhull algorithm for Convex Hulls](https://dpd.cs.princeton.edu/Papers/BarberDobkinHuhdanpaa.pdf)
+As far as my progress on the 3d Quickhull program goes, I feel it's going quite smoothly. I've had a couple issues with my rusty linear algebra skills, but I feel myself rapidly regaining my intuition as I work to solve all the interesting little components of the algorithm. The most fun I've had this week working on my project is with the `clear_internal_points()` function. It has taken an estimated 3 hours of banging my head against a wall and contacting our mentors for me to get it functional, but I can proudly say that it is definitely the most clever or satisfying bit of code thus far. I will explain it below, as I'm sure you could derive a similar joy from the brilliance of the function.
 
-[Visualizing High-Dimensional Data: Advances in the Past Decade](https://www.sci.utah.edu/~beiwang/publications/Vis_HD_STAR_BeiWang_2015.pdf)
+```
+def clear_internal_points(self):
+  hull_centroid = np.sum(self.hull_points, axis=0) / len(self.hull_points)
+  queue = []
+  for p in self.points:
+    for fc in self.facet_centroids():
+      if np.dot(fc - hull_centroid, p - fc) > 0:
+        queue.append(p)
+  seen = set()
+  queue = [x for x in queue if tuple(x) not in seen and not seen.add(tuple(x))]
+  self.points = queue
+```
+
+### WORKING ON THIS. NOT FINISHED
+$$
+h_{centroid} = \frac{\sum p}{card(p)}
+$$
