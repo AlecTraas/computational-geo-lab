@@ -55,6 +55,8 @@ In the upcoming week, I will explore whether it's feasible to incorporate random
 With Lam's help, I learned how to use the random function and wrapped up my work in convexhull.
 Here is the final graph.
 
+![5681708531544_ pic](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/fbf2d042-e329-46b0-9490-62c7a901ce69)
+
 ### Progress 
 From the start, I tried to code the connections for the upper and lower sides. In the process, I digged deeper into the syntax and functionalities of Matplotlib and learned more about slicing techniques. However, the outcomes were not as satisfactory as I had hoped.
 ![image2](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/48d08a1f-9621-4122-9c3f-05d08cd2c9e2)
