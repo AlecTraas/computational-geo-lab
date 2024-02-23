@@ -116,7 +116,8 @@ def clear_internal_points(self):
   self.points = queue
 ```
 
-### WORKING ON THIS. NOT FINISHED
-$$
-h_{centroid} = \frac{\sum p}{card(p)}
-$$
+The whole idea of the algorithm is as follows:
+- find the centroid of the hull $h_c$ by averaging the points together
+- for each point $p$:
+- for each facet centroid $f_c$:
+- if the dot product between the vector formed by $f_c-h_c$ and $p-f_c$ is negative, then the point if within the polyhedron
