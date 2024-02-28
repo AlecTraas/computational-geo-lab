@@ -24,3 +24,7 @@ Ultimately, this method worked. I also decided I wanted to create an animation t
 This week, I mainly focused on preparation for the upcoming team presentation next Tuesday. I did some research on easy way to explain convex hulls and algorithms that would be useful for conveying our projects. One analogy I found was a rubber band analogy. Think of your points as a set of pegs. Now, think of your hull as a rubber band being stretched around the pegs. As you let the rubber band go, it will snap around the pegs and form the convex hull. This is useful to give a common visual explanation for what a convex hull is and a real-world place you might see it.
 
 Beyond this, we started on a slide deck. I wrote slides briefly explaining what a convex hull is by different definitions, and created graphics to show each step of the rubber band analogy. I also created slides explaining the basic pseudo-code of a gift wrapping algorithm and why it works. I included a Wikipedia gif of the algorithm executing as well as attached the animation that I made in matplotlib.
+
+## Week 4
+
+This week we finished up and practiced slides for our math club presentation on Tuesday, 2/27. I presented a brief overview of the gift wrapping algorithm along by taking a sample spread of points and walking through each step of the algorithm. I created visuals to show each subsequent step being processed.
