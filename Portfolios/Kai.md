@@ -45,12 +45,79 @@ Essentially, the size of the convex hull doesn't grow fast enough to keep up pac
 ## Week 2 (2/7 - 2/14)
 During our last meeting, we worked on fixing our 2d convex hull code and we discussed the algorithm we would use for 3d quickhull and, eventually, arbitrary-dimension quickhull. As I understand it, the algorithm is as follows:
 ```
+// For a d-dimensional set of points:
 
+1. Generate a polygon with d-1 points and facets
+2. Remove points within the polygon
+3. Assign each point to the facet it is above
+4. For each facet that has points above it:
+    4.1. Find the furthest point above the facet
+    4.2. Find the horizon ridges for that point
+    4.3. Connect the point to its horizon
+    4.4. Remove the now internal facets and points
+
+// Repeat 4 until no facet has points above
+```
+This week I have attempted to implement this algorithm for the 3d case. I began by researching classes in Python, as I thought an [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) approach would suit this algorithm best because of how many interlinked arrays and lists need to be created and stored. Most of the time I spent working on the program this week was spent building out and debugging the `define_tetrahedron()` function:
+
+##### Preliminary Pseudocode
+In order to effectively and cleanly write the function, I started with a [pseudocode](https://en.wikipedia.org/wiki/Pseudocode) description. I decided to forgo a conventional, code-adjacent style of pseudocode, instead opting for a more plain language, bullet-pointed syntax.
+##### Basic Functionality
+Following my completion of pseudocode, I wrote the function in Python, taking little time to check the correctness of my code. Thankfully, it was entirely functional besides one persistant bug in my code.
+##### Coding Headache
+I consistantly faced one issue in my programming of the `define_tetrahedron()` function: duplicate point selection. Patricularly in low point-count cases, my function would often select the same point as its pick for two of the tetrahedron's vertices. This obviously caused issues, as in such cases a triangle or nothing at all would be outputted as opposed to a complete tetrahedron. In the end, my solution was as follows: 
+
+I went from this
+```
+i = [self.points[:,0].argmin(),
+    self.points[:,1].argmin(),
+    self.points[:,2].argmin(),
+    self.points[:,1].argmax()]
+```
+to this
+```
+temp = np.array(self.points)
+
+i = []
+k = temp[:,0].argmin()
+i.append(k)
+temp[k] = np.inf
+k = temp[:,1].argmin()
+i.append(k)
+temp[k] = np.inf
+k = temp[:,2].argmin()
+i.append(k)
+temp[temp == np.inf] = -np.inf
+temp[k] = -np.inf
+k = temp[:,1].argmax()
+i.append(k)
 ```
 
+The bug, simply put, stemmed from having no duplicate regulation whatsoever. By allowing for a second temporary array that can be edited, we maintain correct indices in the `i` array. Similarly, the act of setting the points in temp to `np.inf` or `-np.inf` after selection allows us to ignore the selected points without changing the indecies of the rest of the points.
+##### Belated Completion
+
+Though I didn't seem to get much work done on the program this week, I hope that in the next I may complete it once and for all.
+
 ## Week 3 (2/14 - 2/21)
-helpful papers for high-dimensional convex hull algorithms:
+In this week's group meeting, we discussed the future of our subgroup, and what direction we will go in with future projects. As a natural successor to the convex hull, we began conversation about [Voronoi Diagrams](https://en.wikipedia.org/wiki/Voronoi_diagram) and [Delaunay Triangulation](https://en.wikipedia.org/wiki/Delaunay_triangulation), with Lam presenting resources for us to futher research these on our own. As we spoke about capstone projects to begin after Spring break, the idea of computing the convex hull in [Hyperbolic space](https://en.wikipedia.org/wiki/Hyperbolic_space) particularly caught my attention, as I've been trying to find an excuse to program a non-euclidean renderer for quite some time. That said, I have to admit that the convex hull intimidates me, as I'm already finding it relatively challenging to program the 3d Quickhull algorithm.
 
-[The Quickhull algorithm for Convex Hulls](https://dpd.cs.princeton.edu/Papers/BarberDobkinHuhdanpaa.pdf)
+As far as my progress on the 3d Quickhull program goes, I feel it's going quite smoothly. I've had a couple issues with my rusty linear algebra skills, but I feel myself rapidly regaining my intuition as I work to solve all the interesting little components of the algorithm. The most fun I've had this week working on my project is with the `clear_internal_points()` function. It has taken an estimated 3 hours of banging my head against a wall and contacting our mentors for me to get it functional, but I can proudly say that it is definitely the most clever or satisfying bit of code thus far. I will explain it below, as I'm sure you could derive a similar joy from the brilliance of the function.
 
-[Visualizing High-Dimensional Data: Advances in the Past Decade](https://www.sci.utah.edu/~beiwang/publications/Vis_HD_STAR_BeiWang_2015.pdf)
+```
+def clear_internal_points(self):
+  hull_centroid = np.sum(self.hull_points, axis=0) / len(self.hull_points)
+  queue = []
+  for p in self.points:
+    for fc in self.facet_centroids():
+      if np.dot(fc - hull_centroid, p - fc) > 0:
+        queue.append(p)
+  seen = set()
+  queue = [x for x in queue if tuple(x) not in seen and not seen.add(tuple(x))]
+  self.points = queue
+```
+
+The whole idea of the algorithm is as follows:
+- find the centroid of the hull $h_c$ by averaging the points together
+- for each point $p$:
+- for each facet centroid $f_c$:
+- if the dot product between the vector formed by $f_c-h_c$ and $p-f_c$ is negative, then the point if within the polyhedron
