@@ -26,4 +26,6 @@ During our meeting on the 14th, we pivoted away from our previous discussion on 
 
 During our meeting on the 20th, we began to develop our presentation for the group meeting on the 27th. We decided we were going to mainly focus on our work surrounding the convex hull. As for the structure and content of the presentation, we decided on including an introduction to the concept of a convex hull, the algorithms each of us worked on and a high level look at how each algorithm works, as well as applications of the convex hull. For our presentation, we want to focus on visual aids and diagrams to hopefully make our work intuitive and easy to understand for our audience. Overall, I found this meeting to be really productive in setting up the overall structure and establishing what each group member was going to focus on and work on to finalize for the 27th.
 
+## Week 4 (2/21 - 2/28)
 
+This week, we mainly focused on preparing our presentation for 2/27. As I was tasked with presenting on the Graham Scan algorithm, and after listening to feedback from my group members, I created an animation of a very basic run through of the Graham scan algorithm.
