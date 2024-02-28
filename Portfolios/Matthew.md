@@ -28,7 +28,7 @@ During our meeting on the 20th, we began to develop our presentation for the gro
 
 ## Week 4 (2/21 - 2/28)
 
-This week, we mainly focused on preparing our presentation for 2/27. As I was tasked with presenting on the Graham Scan algorithm, and after listening to feedback from my group members, I created an animation of a very basic run through of the Graham scan algorithm. Our thought with this basic animation was to show the "always turning left" method this algorithm relies on. 
+This week, we mainly focused on preparing our presentation for 2/27. As I was tasked with presenting on the Graham Scan algorithm, and after listening to feedback from my group members, I created an animation of a very basic run through of the Graham scan algorithm. Our thought with this basic animation was to show the "always turning left" method this algorithm relies on. Then for the cases where we end up turning right, we "pop out" the middle point of the three most recent points that we have iterated through.
 
 ![5d61acda-4c43-4e89-89d6-a22da253afa3](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/7c5c4e1b-03ae-4811-9438-b6d1a8295ca4)
 
