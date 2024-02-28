@@ -41,3 +41,4 @@ This week we finished up and practiced slides for our math club presentation on 
 ![image 10](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/Screenshot%202024-02-28%20162608.png)
 ![image 11](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/Screenshot%202024-02-28%20162622.png)
 ![image 12](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/Screenshot%202024-02-28%20162641.png)
+![gif 1](https://drive.google.com/file/d/1mmrHI-DirlTQ_BmRftYvNL2fqQNk91zP/view?usp=sharing)
