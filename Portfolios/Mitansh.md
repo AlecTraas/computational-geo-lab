@@ -30,4 +30,12 @@ This week, the main focuse was on completing my GiftWrapping algorithm for a con
 
 I also read through some parts of the textbook chapter on Voronoi Diagrams. Given my interest in the applications of mathematics, I'm extremely intrigued as to the use of Voronoi diagrams in production processes, delivery optimization mechanisms, and I wonder if Voronoi diagrams could be used to analyze tactics and spaces in sports such as football or soccer. An idea I had related to that is for scouting potential players: using voronoi diagrams to map out the space a player is responsible for on the field, using voronoi diagrams to analyze a player's positioning and the spaces they most occupy/take responsibility for, and hence being able to find the best match. Some more research will be required, but I'm extremely interested in seeing where this could lead.
 
+![Screenshot (50)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/ae7fde89-d5ca-4d33-9be1-faf81d5be025)
+![Screenshot (51)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/32c4ab26-1e0b-4fc9-b6ea-86e47e50f5bb)
+![Screenshot (52)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/fca18835-bfad-4e6b-8c0d-eab374937b95)
+![Screenshot (53)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/6e931fee-b5d3-4133-8935-4583eb9fb97d)
+![Screenshot (54)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/99d6a62c-8650-4bf6-99f2-44253c0e497e)
+![Screenshot (55)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/3dcfaaff-57fa-4aa9-afda-c59951bc9249)
 
+## Week 4 (2/23-3/1)
+This week, the main focus was on completing my slides and preparing for the upcoming presentation to the rest of the Geometry Lab group. We decided on the split of slides (who is presenting what). I presented on the introduction and applications of Convex Hulls, and then about the GiftWrapping Algorithm, and in which scenarios it is more efficient to use the "four quadrant" variation of the GiftWrapping approach. 
