@@ -25,3 +25,9 @@ I spent time this week getting familiar with numpy and pandas, since I have rare
 ![Screenshot (45)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/b5be7180-f8d6-4536-be73-71cdacb718a8)
 ![Screenshot (44)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/5a974d33-3889-4223-8ba9-a1d6614235b3)
 
+## Week 3 (2/15-2/22)
+This week, the main focuse was on completing my GiftWrapping algorithm for a convex hull. I did have to take some inspiration from other GitHubs in order to get the syntax and flow order right, but the main idea was to right an algorithm from the GiftWrapping approach that can read a set of points and spit out a convex hull. The idea of a part of the algorithm was to also be interactive, prompting the user for the number of points n desired and generating a convex hull from n randomly generared points. Pictures of the code and the final output generated are below. I have included pictures of the convex hull for both n=200 and n=300.
+
+I also read through some parts of the textbook chapter on Voronoi Diagrams. Given my interest in the applications of mathematics, I'm extremely intrigued as to the use of Voronoi diagrams in production processes, delivery optimization mechanisms, and I wonder if Voronoi diagrams could be used to analyze tactics and spaces in sports such as football or soccer. An idea I had related to that is for scouting potential players: using voronoi diagrams to map out the space a player is responsible for on the field, using voronoi diagrams to analyze a player's positioning and the spaces they most occupy/take responsibility for, and hence being able to find the best match. Some more research will be required, but I'm extremely interested in seeing where this could lead.
+
+
