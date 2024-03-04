@@ -1,27 +1,45 @@
+##Standard Gift Wrapping Algorithm
+
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
-#Sort by x-value
-points=np.array([1,1],[2,2],[3,4],[5,6],[7,8])
-x_vals=points[ : ,0]
-indices=np.argsort(x_vals)
-new_points=points[indices]
-n=len(new_points)
-#finding leftmost and rightmost point
-lp=new_points[0]
-rp=new_points[n]
-#separating points into upperset and lowerset
-#first attempting code for if lp and rp are in a straight line
-upper=np.array()
-lower=np.array()
-for p in points:
-  if (p[ : ,1]>=lp[ : ,1]):
-    upper.append(p)
-  else:
-    lower.append(p)
-#function to compute distances of points from line using vector cross product
-def distance():
-  dist=(np.cross(rp-lp,points-lp)/norm(rp-lp))
-  pf=points[np.argmax(dist)] #Thanks Kai!
-  return pf
+def is_CClockwise(p1, p2, p3):
+    return np.cross(p2 - p1, p3 - p1) >= 0
 
+def GiftWrapping(N):
+    n = len(N)
+    P = np.empty((n, 2), dtype=int)
+    leftmost = np.argmin(N[:, 0])
+    HP1 = N[leftmost]
+
+    i = 0
+    while True:
+        P[i] = HP1
+        endpoint = N[0]
+        for j in range(1, n):
+            if np.array_equal(endpoint, HP1) or not is_CClockwise(N[j], P[i], endpoint):
+                endpoint = N[j]
+        i += 1
+        HP1 = endpoint
+        if np.array_equal(endpoint, P[0]) and i > 1:
+            break
+
+    return P[:i]
+
+try:
+    S = int(sys.argv[1])
+except (IndexError, ValueError):
+    S = int(input("Enter desired number of points: "))
+
+P = np.random.randint(0, 400, size=(S, 2))
+
+L_giftwrapping = GiftWrapping(P)
+
+plt.figure(figsize=(6, 6))
+plt.plot(L_giftwrapping[:, 0], L_giftwrapping[:, 1], "b-", picker=5)
+plt.plot(L_giftwrapping[[i-1 for i in range(len(L_giftwrapping))], 0], L_giftwrapping[[i-1 for i in range(len(L_giftwrapping))], 1], 'b-', picker=5)
+plt.plot(P[:, 0], P[:, 1], ".r")
+plt.axis("off")
+
+plt.show()
