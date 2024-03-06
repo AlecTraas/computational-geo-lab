@@ -126,4 +126,7 @@ The whole idea of the algorithm is as follows:
 Foreword: This is the third time I am rewriting my portfolio. I have accidentally left the page without commiting **Twice**. It's very frustrating that I've written 6 full paragraphs, but now I have to restart again. I will be committing every five minutes from now on so that I'm not doomed to relive Week 5 for eternity.
 
 Last week we presented to the wider Geometry Lab, and got to see what the other subgroups are working on. It went pretty well, but we had to halt work on our projects to prepare. This week we determined what projects we will work on next, with Alec and Lam giving me an introduction to the various $\mathbb{H}^2$ to $\mathbb{R}^2$ projection methods. We mainly discussed the [Poincaré Disk model](https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model), in which the infinite hyperbolic plane is crammed into a Euclidean unit circle. This model is most useful for it's preservation of angles and for not extending to infinity. 
-![disk](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Hyperbolic_domains_642.png/800px-Hyperbolic_domains_642.png)
+![Poincaré Disk Image](https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Hyperbolic_domains_642.png/800px-Hyperbolic_domains_642.png)
+I also proposed my own model, which projects orthogonally and therefore occupies the entire Eucildean plane (this would preserve curvature, but not much else). This, apparently, has already been proposed by David Gans. *My* model is, thereby, actually called the [Gans model](https://en.wikipedia.org/wiki/Hyperbolic_geometry?scrlybrkr=58c7a161#:~:text=the%20models%20(below)-,The%20Gans%20model,-%5Bedit%5D).
+
+
