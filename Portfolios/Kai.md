@@ -121,3 +121,8 @@ The whole idea of the algorithm is as follows:
 - for each point $p$:
 - for each facet centroid $f_c$:
 - if the dot product between the vector formed by $f_c-h_c$ and $p-f_c$ is negative, then the point if within the polyhedron
+
+## Week 5 (2/28 - 3/6)
+Foreword: This is the third time I am rewriting my portfolio. I have accidentally left the page without commiting **Twice**. It's very frustrating that I've written 6 full paragraphs, but now I have to restart again. I will be committing every five minutes from now on so that I'm not doomed to relive Week 5 for eternity.
+
+Last week we presented to the wider Geometry Lab, and got to see what the other subgroups are working on. It went pretty well, but we had to halt work on our projects to prepare. This week, 
