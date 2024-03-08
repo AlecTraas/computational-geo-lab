@@ -132,4 +132,5 @@ Last week we presented to the wider Geometry Lab, and got to see what the other 
 I also proposed my own model, which projects orthogonally and therefore occupies the entire Eucildean plane (this would preserve curvature, but not much else). This, apparently, has already been proposed by David Gans. *My* model is, thereby, actually called the [Gans model](https://en.wikipedia.org/wiki/Hyperbolic_geometry?scrlybrkr=58c7a161#:~:text=the%20models%20(below)-,The%20Gans%20model,-%5Bedit%5D).
 
 As for my work on the 3d Quickhull program, I have completed all aspects of the program besides the whole remeshing-to-connect-to-the-horizon deal. Today, however, I worked out the first step of that process instead of paying attention to my teacher:
-![image of my work]()
+
+<img src="https://raw.githubusercontent.com/AlecTraas/computational-geo-lab/main/portfolio-images/blackboard.jpg"  width="70%">
