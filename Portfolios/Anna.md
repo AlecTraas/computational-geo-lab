@@ -66,5 +66,6 @@ I have read several materials to get a clue on how to start with Delaunay triang
 
 I believe this graph will be beneficial for future presentations and provide a basic understanding of computational geometry.
 
-
+## Week 4 (2/21 - 2/28)
+This week, we mainly focus on our presentation to the other geometry labs.
 
