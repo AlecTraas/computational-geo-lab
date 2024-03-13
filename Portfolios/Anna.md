@@ -67,5 +67,11 @@ I have read several materials to get a clue on how to start with Delaunay triang
 I believe this graph will be beneficial for future presentations and provide a basic understanding of computational geometry.
 
 ## Week 4 (2/21 - 2/28)
-This week, we mainly focus on our presentation to the other geometry labs.
+This week, we mainly focused on our presentation to the other geometry labs. I was tasked with presenting on the 2D quickhull algorithm.
+
+## Week 5 (2/28 - 3/13)
+During spring break, I was reading through materials about the line segment intersection problems. I have learned through the Plane Sweep Algorithm and learned the basic theory of the basic theory about the run time.
+Balanced Binary Search Tree is included in this algorithm but I did not know much about it. Next week, I will focus more on the details of the algorithm, learn the balanced binary search tree, and see how could i visualize this.
+
+<img width="681" alt="截屏2024-03-13 下午4 43 47" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/73ce7dda-8706-4883-b988-094698a059a6">
 
