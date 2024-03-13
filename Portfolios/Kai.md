@@ -142,4 +142,4 @@ As I write this, I realize there is a major flaw in my method. As you can see in
 
 I have finished the first draft of my code, and I am currently working to debug the program. Unfortunately, I have found I substantial number of issues like the one I just described.
 
-As for progress on the $\mathbb{H}^2$ Convex Hull Program, I have been researching libraries to help with hyperbolic geometry display
+As for progress on the $\mathbb{H}^2$ Convex Hull Program, I have been researching libraries to help with hyperbolic geometry display and abstract away some of the code I'd have to write myself. One really nice-looking library I've found is the [geometry-tools](https://public.websites.umich.edu/~tjwei/geometry_tools/geometry_tools.html) API by Theodore Weisman. I will investigate it further, but it seems very promising.
