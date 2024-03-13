@@ -134,3 +134,12 @@ I also proposed my own model, which projects orthogonally and therefore occupies
 As for my work on the 3d Quickhull program, I have completed all aspects of the program besides the whole remeshing-to-connect-to-the-horizon deal. Today, however, I worked out the first step of that process instead of paying attention to my teacher:
 
 <img src="https://raw.githubusercontent.com/AlecTraas/computational-geo-lab/main/portfolio-images/blackboard.jpg"  width="70%">
+
+What this is meant to detail is the algorithm by which I can determine which faces are seeem and which ridges are on the horizon. I thought about the convex polyhedron as a simple sphere, and I deduced that the seen facets can be found by simply taking the dot product between the normal of each facet and the "eye" point. The horizon, therefore, would be the set of edges only contained by one facet. 
+
+<img src="https://raw.githubusercontent.com/AlecTraas/computational-geo-lab/31e5eec9d2fb97d6c409aa3198b8aafc7623ffa0/portfolio-images/oops.svg"  width="50%">
+As I write this, I realize there is a major flaw in my method. As you can see in the image, unless the "eye" point is infinitely far away, There will always be the chance for a band of facets just outside the visible range to be marked as visible. I need to account for this some way of another.
+
+I have finished the first draft of my code, and I am currently working to debug the program. Unfortunately, I have found I substantial number of issues like the one I just described.
+
+As for progress on the $\mathbb{H}^2$ Convex Hull Program, I have been researching libraries to help with hyperbolic geometry display
