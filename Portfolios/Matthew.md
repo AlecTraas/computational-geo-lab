@@ -32,3 +32,10 @@ This week, we mainly focused on preparing our presentation for 2/27. As I was ta
 
 ![5d61acda-4c43-4e89-89d6-a22da253afa3](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/7c5c4e1b-03ae-4811-9438-b6d1a8295ca4)
 
+## Week 5
+
+Over the course of spring break and the past couple of days, I have spent most of my time familarizing myself with the networkX library. This library basically acts as the one-stop-shop for anything related to graphs. After reading the documentation and walking through a couple of tutorials, I coded a couple of graphs of different types.
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/12b39a8c-55de-479d-ac1a-450c630ba3bc)
+This shows an undirected graph
+
+I also looked more into possible algorithms I could start to work through now that I have a foundational understanding of the library. One that caught my eye was PageRank, mainly due to its applications in web browsing. In terms of websites, this algorithm determines the "importance" of a website by looking at the websites are directed amongst each other. Websites that are being linked to from other websites are then denoted as "more important". Connecting this back to the idea of graphs, each website could be considered its own node, whereas the links would be looked at as directed edges. 
