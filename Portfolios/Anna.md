@@ -68,6 +68,13 @@ I believe this graph will be beneficial for future presentations and provide a b
 
 ## Week 4 (2/21 - 2/28)
 This week, we mainly focused on our presentation to the other geometry labs. I was tasked with presenting on the 2D quickhull algorithm.
+I created some visualized pictures on google drawing to help understanding:
+![graph1](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/e1f3dedf-dcc7-42df-9ee8-67275aea49b4)
+![graph2](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/3bbb9a26-fa1f-4f2e-bcff-2bc177d20f72)
+![graph3](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/888b94db-d4ba-4a04-b666-f97cc9f5dd5b)
+![graph4](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/e7bb97f6-d418-4f6c-bafa-fc49c6cc5fbf)
+![graph5](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/5dc8cf80-7db6-4099-b25c-f8964467a8f9)
+
 
 ## Week 5 (2/28 - 3/13)
 During spring break, I was reading through materials about the line segment intersection problems. I have learned through the Plane Sweep Algorithm and learned the basic theory of the basic theory about the run time.
