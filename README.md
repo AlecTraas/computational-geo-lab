@@ -32,5 +32,5 @@ If you have questions for the mentors, don't hesitate to email us!
 We will have several meetings involving all the Geometry Lab groups. Here are those dates. Please try to keep these times open, and if there's a conflict you can't avoid, let us know.
 
 * Presentations to the other groups: Tue Feb 27 at 5-6:30pm, Kerchof 314;
-* Meeting with Math Club and AWM: Tue Apr 2 at 5-6:30pm, Kerchof 314;
+* Meeting with Math Club and AWM: Tue Mar 26 at 5-6:30pm, Kerchof 314;
 * Farmers Market: Sat Apr 27 at 9-11am, IX Art Park.
