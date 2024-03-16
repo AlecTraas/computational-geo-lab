@@ -123,25 +123,29 @@ The whole idea of the algorithm is as follows:
 - if the dot product between the vector formed by $f_c-h_c$ and $p-f_c$ is negative, then the point if within the polyhedron
 
 ## Week 5-6 (2/28 - 3/13)
-Foreword: This is the third time I am rewriting my portfolio. I have accidentally left the page without commiting **Twice**. It's very frustrating that I've written 6 full paragraphs, but now I have to restart again. I will be committing every five minutes from now on so that I'm not doomed to relive Week 5 for eternity.
+Foreword: This is the third time I am rewriting my portfolio. I have accidentally left the page without committing **Twice**. It's very frustrating that I've written 6 full paragraphs, but now I have to restart again. I will be committing every five minutes from now on so that I'm not doomed to relive Week 5 for eternity.
 
-Last week we presented to the wider Geometry Lab, and got to see what the other subgroups are working on. It went pretty well, but we had to halt work on our projects to prepare. This week we determined what projects we will work on next, with Alec and Lam giving me an introduction to the various $\mathbb{H}^2$ to $\mathbb{R}^2$ projection methods. We mainly discussed the [Poincaré Disk model](https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model), in which the infinite hyperbolic plane is crammed into a Euclidean unit circle. This model is most useful for it's preservation of angles and for not extending to infinity. 
+Last week we presented to the wider Geometry Lab, and got to see what the other subgroups are working on. It went pretty well, but we had to halt work on our projects to prepare. This week we determined what projects we will work on next, with Alec and Lam giving me an introduction to the various $\mathbb{H}^2$ to $\mathbb{R}^2$ projection methods. We mainly discussed the [Poincaré Disk model](https://en.wikipedia.org/wiki/Poincar%C3%A9_disk_model), in which the infinite hyperbolic plane is crammed into a Euclidean unit circle. This model is most useful for its preservation of angles and for not extending to infinity. 
 
 <img src="https://raw.githubusercontent.com/AlecTraas/computational-geo-lab/main/portfolio-images/poincare.png"  width="40%">
 
-I also proposed my own model, which projects orthogonally and therefore occupies the entire Eucildean plane (this would preserve curvature, but not much else). This, apparently, has already been proposed by David Gans. *My* model is, thereby, actually called the [Gans model](https://en.wikipedia.org/wiki/Hyperbolic_geometry?scrlybrkr=58c7a161#:~:text=the%20models%20(below)-,The%20Gans%20model,-%5Bedit%5D).
+I also proposed my own model, which projects orthogonally and therefore occupies the entire Euclidean plane (this would preserve curvature, but not much else). This, apparently, has already been proposed by David Gans. *My* model is, thereby, actually called the [Gans model](https://en.wikipedia.org/wiki/Hyperbolic_geometry?scrlybrkr=58c7a161#:~:text=the%20models%20(below)-,The%20Gans%20model,-%5Bedit%5D).
 
 As for my work on the 3d Quickhull program, I have completed all aspects of the program besides the whole remeshing-to-connect-to-the-horizon deal. Today, however, I worked out the first step of that process instead of paying attention to my teacher:
 
 <img src="https://raw.githubusercontent.com/AlecTraas/computational-geo-lab/main/portfolio-images/blackboard.jpg"  width="70%">
 
-What this is meant to detail is the algorithm by which I can determine which faces are seeem and which ridges are on the horizon. I thought about the convex polyhedron as a simple sphere, and I deduced that the seen facets can be found by simply taking the dot product between the normal of each facet and the "eye" point. The horizon, therefore, would be the set of edges only contained by one facet. 
+What this is meant to detail is the algorithm by which I can determine which faces are seen and which ridges are on the horizon. I thought about the convex polyhedron as a simple sphere, and I deduced that the seen facets can be found by simply taking the dot product between the normal of each facet and the "eye" point. The horizon, therefore, would be the set of edges only contained by one facet. 
 
 <img src="https://raw.githubusercontent.com/AlecTraas/computational-geo-lab/31e5eec9d2fb97d6c409aa3198b8aafc7623ffa0/portfolio-images/oops.svg"  width="50%">
-As I write this, I realize there is a major flaw in my method. As you can see in the image, unless the "eye" point is infinitely far away, There will always be the chance for a band of facets just outside the visible range to be marked as visible. I need to account for this some way of another.
+As I write this, I realize there is a major flaw in my method. As you can see in the image, unless the "eye" point is infinitely far away, There will always be the chance for a band of facets just outside the visible range to be marked as visible. I need to account for this one way or another.
 
 I have finished the first draft of my code, and I am currently working to debug the program. Unfortunately, I have found I substantial number of issues like the one I just described.
 
-As for progress on the $\mathbb{H}^2$ Convex Hull Program, I have been researching libraries to help with hyperbolic geometry display and abstract away some of the code I'd have to write myself. One really nice-looking library I've found is the [geometry-tools](https://public.websites.umich.edu/~tjwei/geometry_tools/geometry_tools.html) API by Theodore Weisman. I will investigate it further, but it seems very promising.
+As for progress on the $\mathbb{H}^2$ Convex Hull Program, I have been researching libraries to help with hyperbolic geometry display and abstract away some of the code I'd have to write myself. One nice-looking library I've found is the [geometry-tools](https://public.websites.umich.edu/~tjwei/geometry_tools/geometry_tools.html) API by Theodore Weisman. I will investigate it further, but it seems very promising.
 
-Still not sure how to import the API into Colab.
+## Week 7 (3/13 - 3/20)
+In this week's meeting, Alec and Lam helped us get started on our capstone projects, with Lam attempting to get Weisman's API working in Colab. Unfortunately, it posed too many challenges, and we agreed it would be best for me to stick to a different IDE on this one. I also spent some time discussing point-geodesic distance formulae with Alec, and I plan to do work this week to figure out exactly how I will implement one in Python.
+
+Today, Saturday 3/16, I have been struggling to clear up an issue that has gone under the radar in my code for quite some time. A while ago, I identified that there exist indexing issues within my program stemming from the resizing of the global `points` array. In [testing](https://colab.research.google.com/drive/1dS4k5Yes62GSvN-7cx40jfRff217FLMT?usp=sharing) my solution, I discovered a fatal flaw with the `clear_internal_points()` method. For a few uniquely-situated points, their position relative to the polyhedron is incorrectly identified. That is, some points which are inside are marked as outside, and vice versa. Here is a visual depiction of how this issue comes about, as far as I understand:
+
