@@ -49,3 +49,4 @@ This week, I worked on preparing myself to write code for Fortune's Algorithm. I
 As so:
 ![Screenshot (59)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/37c26943-dcd2-4ef4-9814-62297a6ee504)
 The binary search tree helps in adding sites that the sweep line encounters and maintaining and updating the voronoi arcs correctly, including the insertion and "expansion" of arcs, as well as the removal of arcs when a circle event occurs.
+I also explored Dijkstra's Algorithm to compute the shortest path connecting all sites. It basically iterates through all the possible paths before choosing the path of least cost from the source to the destination, and then does the same again from the new source, the original destination. It also picks destinations via the same method of evaluating all possible nodes and identifying the least cost path.
