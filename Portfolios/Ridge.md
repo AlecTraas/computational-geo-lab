@@ -137,7 +137,7 @@ I also tested my nD algorithm on various 1D, 2D, and 3D queries.
 
 ![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/3dtests.png)
 
-My next goal is to ensure the algorithm works on points that share variable calues. Currently, the sorting order of points if they have the same value for the current variable is undefined. This leads to problems when these points span across the median. One or more points will be to the left of the median with equal value. However, we should always include points that are greater than or equal to in the right subtree.
+My next goal is to ensure the algorithm works on points that share variable values. Currently, the sorting order of points if they have the same value for the current variable is undefined. This leads to problems when these points span across the median. One or more points will be to the left of the median with equal value. However, we should always include points that are greater than or equal to in the right subtree.
 
 To fix this, I am defining an ordering for nodes through a compareTo method. Instead of just comparing based on the current variable value, it will compare on current variable value, then the next if they are equal, then the next, etc. This ensures that points will be placed on the side of the median we expect them to, unless there are multiple points with all the same variable values. However, in a database, points have a unique "id" identifier so all variables of separate points can never be equal.
 
