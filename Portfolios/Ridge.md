@@ -77,11 +77,11 @@ If instead of one variable we had multiple, we can get around the added complexi
 
 The underlying structure of the range tree must be slightly altered so that each node is linked to a range tree of points the stemming from this node ordered on the next variable. The runtime of this algorithm is O((logn)^z + k) where n is the number of points, k is the number of points reported, and z is the number of dimensions.
 
-![diagram showing 2d structure works](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dbuild.png)
+![diagram showing 2d structure works](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dtree.png)
 
 My next step in implementing this algorithm will be first to interpret a 1D and 2D range tree creation and searching algorithm. The book provides pseudocode for these algorithms but they are not scaled to work for an n dimensional query. 
 
-![diagram showing 2d build algo](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dtree.png)
+![diagram showing 2d build algo](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dbuild.png)
 
 ![diagram showing 2d query algo](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dquery.png)
 
