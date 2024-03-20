@@ -42,3 +42,43 @@ This week we finished up and practiced slides for our math club presentation on 
 ![image 11](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/Screenshot%202024-02-28%20162622.png)
 ![image 12](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/Screenshot%202024-02-28%20162641.png)
 ![gif 1](https://drive.google.com/file/d/1mmrHI-DirlTQ_BmRftYvNL2fqQNk91zP/view?usp=sharing)
+
+## Week 5
+
+This week, since we had mostly completed our convex hull algorithms, we were tasked with selecting topics for a final project from our textbook Computational Geometry: Algorithms and Applications (accessible here: https://cimec.org.ar/foswiki/pub/Main/Cimec/GeometriaComputacional/DeBerg_-_Computational_Geometry_-_Algorithms_and_Applications_2e.pdf). 
+
+The main topic that stood out to me was Orthogonal Range Searching in Chapter 5. I took an interest in it mainly because it seemed deceptively simple and was also related to topics I had experiences in like database querying and search trees.
+
+The basis of the problem is incredibly easy to understand. At it's simplest level, you are given a set of points and want to find all points that have values in some range. 
+
+A simple solution to this problem would be to simply iterate over every single point and check whether its value satisfies the requirement. This has Theta(n) time complexity and uses no additional space. While this does work, we can do better.
+
+Another approach we can use is range searching and is reminiscent of using a binary search to efficiently search a data set. We create a binary search tree to represent the data where our leaf nodes are our data points. Our intermediary nodes are data points that we use to traverse and find valid points. If our data is sorted, we can do this in linear time based on the recursively splitting the list in two across the median. Note that the medians are still included as leaves so either the right or left sublist must continuously contain the median.
+
+picture of tree
+
+If we are given a parameter [x, x'] to search for values over, the 1D example works as follows. Traverse the tree and find the node where the paths to x and x' diverge. We can do this by traversing the tree while x and x' will travel the same direction and returning the first node where they do not or the leaf node if they converge.
+
+picture of pseudo code
+
+If they converge to a leaf, we only have to check if this leaf is included. Otherwise, we first follow the path to x starting from the split node. Anytime the path traverses the left child in the tree, we add all the leaves that stem from the right child to our answers. This is based on the idea that the leaves to the right of the path from the split node to x will be between the paths of x and x'. Ultimately, the path will terminate at a leaf which we manually have to check.
+
+picture of 1d query
+
+Likewise, we follow the path to x' from the split node. Anytime the path traverses the right child, we add all the leaves that stem from the left child. Check the leaf node we end at. A vizualiation of this can be seen below.
+
+page 97 diagram
+
+The time complexity of this algorithm is O(logn + k) where n is the number of points and k is the number of points that satisfy our interval. The worst case time is still the same as the simple method as you will always take O(n) time if you must return all points. However, the average case is significantly better as all points will usually not be returned.
+
+If instead of one variable we had multiple, we can get around the added complexity by performing an additional range search on the next variable anytime we would have added those point(s) to our answer in the 1D example. The underlying structure of the range tree must be slightly altered so that each node is linked to a range tree of points the stemming from this node ordered on the next variable. The runtime of this algorithm is O((logn)^z + k) where n is the number of points, k is the number of points reported, and z is the number of dimensions.
+
+picture of this on page 106
+
+My next step in implementing this algorithm will be first to interpret a 1D and 2D range searching algorithm. The book provides pseudocode for these algorithms but they are not scaled to work for an n dimensional query. 
+
+picture of pseudo code
+
+After that, I hope to implement and test an n dimensional range searching algorithm.
+
+## Week 6
