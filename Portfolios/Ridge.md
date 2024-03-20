@@ -55,29 +55,35 @@ A simple solution to this problem would be to simply iterate over every single p
 
 Another approach we can use is range searching and is reminiscent of using a binary search to efficiently search a data set. We create a binary search tree to represent the data where our leaf nodes are our data points. Our intermediary nodes are data points that we use to traverse and find valid points. If our data is sorted, we can do this in linear time based on the recursively splitting the list in two across the median. Note that the medians are still included as leaves so either the right or left sublist must continuously contain the median.
 
-picture of tree
+![1D tree](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/Screenshot%2024-03-19%224042.png)
 
 If we are given a parameter [x, x'] to search for values over, the 1D example works as follows. Traverse the tree and find the node where the paths to x and x' diverge. We can do this by traversing the tree while x and x' will travel the same direction and returning the first node where they do not or the leaf node if they converge.
 
-picture of pseudo code
+![splitnode](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/Screenshot%2024-03-19%224128.png)
 
 If they converge to a leaf, we only have to check if this leaf is included. Otherwise, we first follow the path to x starting from the split node. Anytime the path traverses the left child in the tree, we add all the leaves that stem from the right child to our answers. This is based on the idea that the leaves to the right of the path from the split node to x will be between the paths of x and x'. Ultimately, the path will terminate at a leaf which we manually have to check.
 
-picture of 1d query
+![1d query](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/Screenshot%2024-03-19%224201.png)
 
 Likewise, we follow the path to x' from the split node. Anytime the path traverses the right child, we add all the leaves that stem from the left child. Check the leaf node we end at. A vizualiation of this can be seen below.
 
-page 97 diagram
+![diagram showing query works](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/Screenshot%2024-03-19%224113.png)
 
 The time complexity of this algorithm is O(logn + k) where n is the number of points and k is the number of points that satisfy our interval. The worst case time is still the same as the simple method as you will always take O(n) time if you must return all points. However, the average case is significantly better as all points will usually not be returned.
 
-If instead of one variable we had multiple, we can get around the added complexity by performing an additional range search on the next variable anytime we would have added those point(s) to our answer in the 1D example. The underlying structure of the range tree must be slightly altered so that each node is linked to a range tree of points the stemming from this node ordered on the next variable. The runtime of this algorithm is O((logn)^z + k) where n is the number of points, k is the number of points reported, and z is the number of dimensions.
+If instead of one variable we had multiple, we can get around the added complexity by performing an additional range search on the next variable anytime we would have added those point(s) to our answer in the 1D example. 
 
-picture of this on page 106
+![diagram showing 2d query works](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dqueryvisual.png)
 
-My next step in implementing this algorithm will be first to interpret a 1D and 2D range searching algorithm. The book provides pseudocode for these algorithms but they are not scaled to work for an n dimensional query. 
+The underlying structure of the range tree must be slightly altered so that each node is linked to a range tree of points the stemming from this node ordered on the next variable. The runtime of this algorithm is O((logn)^z + k) where n is the number of points, k is the number of points reported, and z is the number of dimensions.
 
-picture of pseudo code
+![diagram showing 2d structure works](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dbuild.png)
+
+My next step in implementing this algorithm will be first to interpret a 1D and 2D range tree creation and searching algorithm. The book provides pseudocode for these algorithms but they are not scaled to work for an n dimensional query. 
+
+![diagram showing 2d build algo](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dtree.png)
+
+![diagram showing 2d query algo](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week5/2dquery.png)
 
 After that, I hope to implement and test an n dimensional range searching algorithm.
 
