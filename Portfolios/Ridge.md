@@ -91,49 +91,51 @@ After that, I hope to implement and test an n dimensional range searching algori
 
 This week I focused on getting working implementations of my 1D, 2D, and nD range query algorithms. I first started by creating a node class used to create and traverse the tree.
 
-![node1](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
-
-![node2](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![node1](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/node1.png)
+![node2](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/node2.png)
 
 The class is fairly simple, consisting mostly of getters and setters and a display method. It has a left and right child, the left should have a value less than and the right a value greater than or equal to. It has a "canonical tree" which is the search tree of the spanned points ordered on the next variable (if there is one). This is useful for all cases greater than the 1D case where you need trees for the next variable. It also has a "subtree" which is the points it spans. This is useful for the 1D or any case where you are on the last searched variable.
 
 I first created the findsplit node method. I slightly altered it from the textbook to make it easier to generalize. I included a dimension parameter so that it could be used regardless what variable you were searching on. I also change it so that the right subchild included the median node whereas the book had it included in the left. It was just slightly easier to code and avoid index out of bounds errors when creating the method to create the tree.
 
-![findsplit](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![findsplit](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/find_split_node.png)
 
 I next created the 1D range query method. This is extremely close to the algorithm stated in the book. I also created the check_leaf method to simplify and not reuse code. I changed the algorithm to account for the right subchild including the median by checking >= rather than > if I were to traverse right in the tree. Once the path to start traversed left or the path to end traversed right, I added all points spanned by the opposite child to a field "answer" which stores my output.
 
-![1D range query](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![1D range query](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/1dqueryalgo.png)
 
-![check leaf](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![check leaf](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/checkleaf.png)
 
 The next algorithm I completed was the create 2D range tree algorithm. This has some slight discrepencies from the book algorithm so that it was easier to generalize. If I am not on the last variable, I set the next canonical subtree. Else, I set the subtree span. This is because I will only need the span on the last variable and the canonical tree everywhere else. The function returns the root of the tree. You also have to be sure to sort the values on the next variable so that the tree can be constructed based on median values.
 
-![2d range tree](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![2d range tree](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/create_2d_range_tree.png)
 
 I then moved on to the 2D query algorithm, again accounting for the median placement discrepancy. This was overall very similar to the book's algorithm. Instead of adding points to my answer whenever a path to start goes left or end goes right, I call my 1D query on the canonical tree of that point with the given next parameter. 
 
-![2d query](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![2d query](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/2dqueryalgo.png)
 
 Ultimately, I decided to make a second version for my nD solution so that I could clean up and generalize my code. The node classes has some slight differences from before as I renamed subtrees to span as it made more logical sense to call it this. I also renamed canonical subtrees to just subtrees to simplify.
 
-![new node class](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![new node class](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/ndnode1.png)
+![new node class](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/ndnode2.png)
 
 I consolidated the methods pertaining to range tree creation into a range_tree class since it is a data structure and makes sense to be interpreted as a class. I also added a display function that prints the range tree ordering on the first variable. Besides slight renaming, the creation functions remain largely unchanged. 
 
-![new range tree class](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![new range tree class](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/ndcreatetree.png)
 
 Lastly, I consolidated all querying related methods into a range search query class. This should help with modularity if I hope to implemented other querying algorithms. Most functions remain unchanged except for the recursive query function. Instead of having one function for 1D, and another for 2+D, I consolidated both into a nD function. It now takes in a parameter for the number of variables in the range tree and the current variable number being searched over. Every time the function finds a possible subtree of points, it recursively calls itself with the new subtree on the next variable. This happens until we have reached the maximum depth at the number of dimensions in the tree.
 
-![new range searching class](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![new range searching class](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/ndquery1.png)
+
+![new range searching class](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/ndquery2.png)
 
 I also tested my nD algorithm on various 1D, 2D, and 3D queries.
 
-![1d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![1d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/1dtests.png)
 
-![2d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![2d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/2dtests.png)
 
-![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/)
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week6/3dtests.png)
 
 My next goals are to ensure the algorithm works on points. Currently, the sorting order of points if they have the same value for the current variable is undefined. This leads to problems when these points span across the median. One or more points will be to the left of the median with equal value. However, we should always include points that are greater than or equal to in the right subtree.
 
