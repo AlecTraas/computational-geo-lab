@@ -83,7 +83,7 @@ Balanced Binary Search Tree is included in this algorithm but I did not know muc
 <img width="681" alt="截屏2024-03-13 下午4 43 47" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/73ce7dda-8706-4883-b988-094698a059a6">
 
 ## Week 6 (3/13 - 3/20)
-This week, I dedicated my efforts to developing the foundational code for detecting line segment intersections, a crucial aspect of computational geometry. My approach was grounded in a comprehensive review of scholarly materials that laid the theoretical groundwork for this problem. I delved into various documents, including:
+This week, I was focusing on developing the foundational code for detecting line segment intersections, a crucial aspect of computational geometry. My approach was grounded in a comprehensive review of scholarly materials that laid the theoretical groundwork for this problem. I delved into various documents, including:
 https://cs.gmu.edu/~jmlien/teaching/09_fall_cs633/uploads/Main/lecture02.pdf
 https://ics.uci.edu/~goodrich/teach/geom/notes/LineSweep.pdf
 https://www.cs.cmu.edu/~15451-f22/lectures/lec21-geometry.pdf
