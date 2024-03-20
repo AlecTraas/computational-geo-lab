@@ -82,3 +82,24 @@ Balanced Binary Search Tree is included in this algorithm but I did not know muc
 
 <img width="681" alt="截屏2024-03-13 下午4 43 47" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/73ce7dda-8706-4883-b988-094698a059a6">
 
+## Week 6 (3/13 - 3/20)
+This week, I dedicated my efforts to developing the foundational code for detecting line segment intersections, a crucial aspect of computational geometry. My approach was grounded in a comprehensive review of scholarly materials that laid the theoretical groundwork for this problem. I delved into various documents, including:
+https://cs.gmu.edu/~jmlien/teaching/09_fall_cs633/uploads/Main/lecture02.pdf
+https://ics.uci.edu/~goodrich/teach/geom/notes/LineSweep.pdf
+https://www.cs.cmu.edu/~15451-f22/lectures/lec21-geometry.pdf
+
+These resources provided a solid understanding of the algorithm's logic, which I aimed to translate into my coding efforts.
+
+Segment Intersection Visualization - This illustration depicts the step-by-step process of my current implementation, highlighting how line segments are processed and intersections are identified or rejected.
+
+The algorithm proceeds by processing the segments in a sequential manner, utilizing a binary tree structure to maintain and query the active line segments efficiently. Here's a brief overview of the process:
+
+Upon processing the left endpoint of a segment, the algorithm checks for intersections with currently active segments, inserting the new segment into the tree.
+Right endpoints trigger the deletion of their respective segments from the tree, with a final check for intersections amongst the remaining segments.
+Through this iterative process, the algorithm successfully identifies intersections, such as those between segments 2 and 3.
+
+Additionally, I explored practical implementations, such as a C++ code example on GeeksforGeeks, which offered valuable insights into translating theoretical concepts into executable code.
+
+![SegmentIntersect-1](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/9bce4403-1bf9-402b-be03-06b4428a37f9)
+
+Currently, my implementation can determine the existence of line segments but falls short in accurately identifying and exporting intersections. The next phase of development will focus on refining this capability, with an emphasis on outputting identified intersections efficiently.
