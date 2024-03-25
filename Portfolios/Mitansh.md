@@ -54,7 +54,8 @@ I also explored Dijkstra's Algorithm to compute the shortest path connecting all
 ## Week 6 (3/21-3/27)
 This week, I spent some time learning about NetworkX, the most popular python library for graphs. NetworkX will be quite useful when attempting my application of Voronoi Diagrams to soccer formations, since the initial positions of players can be represented in terms of graphs. After playing a little bit with the basic syntax and code structure, I generated an image for a basic 1-4-3-3 formation in soccer, one of the most popular formations in use today. 
 
-![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/fb388234-d7d1-44cc-8854-8b2778b41b5d)
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/2c3e36b5-1dc3-437a-a153-0a6dc8f10883)
+
 
 I then worked on a mini-manual Voronoi Diagram for the same, currently taking into account only the nodes 1,2,3,4,5. In soccer, this is the defensive line and the goalkeeper, and, arguably where positioning and hence Voronoi Diagrams to come up with strategies are most useful. In the future, the goal is to construct a Voronoi Diagram for the full 11 players (either through my in-progress algorithm if possible, or through manual implementation of the sweep line method). This was the product (where the edges represent the boundaries of the Voronoi Diagram for these 5 nodes only):
 
