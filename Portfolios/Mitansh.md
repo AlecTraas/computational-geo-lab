@@ -53,13 +53,17 @@ I also explored Dijkstra's Algorithm to compute the shortest path connecting all
 
 ## Week 6 (3/21-3/27)
 This week, I spent some time learning about NetworkX, the most popular python library for graphs. NetworkX will be quite useful when attempting my application of Voronoi Diagrams to soccer formations, since the initial positions of players can be represented in terms of graphs. After playing a little bit with the basic syntax and code structure, I generated an image for a basic 1-4-3-3 formation in soccer, one of the most popular formations in use today. 
+
 ![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/fb388234-d7d1-44cc-8854-8b2778b41b5d)
 
 I then worked on a mini-manual Voronoi Diagram for the same, currently taking into account only the nodes 1,2,3,4,5. In soccer, this is the defensive line and the goalkeeper, and, arguably where positioning and hence Voronoi Diagrams to come up with strategies are most useful. In the future, the goal is to construct a Voronoi Diagram for the full 11 players (either through my in-progress algorithm if possible, or through manual implementation of the sweep line method). This was the product (where the edges represent the boundaries of the Voronoi Diagram for these 5 nodes only):
+
 ![Screenshot (62)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/4d239f24-4e52-43c1-9cfe-5c2494ac7727)
 
 I also spent some time thinking about my presentation at the Math Club/AWM meeting. In soccer, "heat maps" are visuals that represent the average position of a player, with the darker colors representing higher density. 
+
 ![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/0cb11eb6-c66b-4ed0-89f6-4f8c6bac234f)
+
 This is the heatmap for Virgil Van Dijk, from his debut for Liverpool. As can be seen, his heatmap from that game, if overlayed on the Voronoi Diagram above almost perfectly overlaps for the defensive aspects. At the time, Liverpool used a 1-4-3-3 system, so we can see why Virgil Van Dijk was a great addition, since his positioning almost perfectly captures what was required of him positionally in that system according to the Voronoi Diagram generated
 
 
