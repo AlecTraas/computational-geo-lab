@@ -49,7 +49,8 @@ For this week, I mainly focused on preparing materials to demonstrate the PageRa
 
 ![430E367E-E338-40CD-BC51-A4A5207C71C3_1_105_c](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/cd2b1e69-c7f3-4c25-a327-682c048342fa)
 
-<sub>*Weighted digraph visual I used as a basis to showcase the PageRank algorithm, representing the weights / pageranks as the amount of Cheerios on a specific node*</sub>
+<sub>Weighted digraph visual I used as a basis to showcase the PageRank algorithm, representing the weights / pageranks as the amount of Cheerios on a specific node</sub>
+
 
 I have also finished the bulk of my simplified pagerank algorithm, and am troubleshooting the algorithm to completely finalize it. While my algorithm currently ends by checking the difference between the previous iteration pageranks and current iteration pageranks is small enough, I would like to try implementing this algorithm as a stochastic process using linear algebra. This way, rather than relying on doing some large amount of pagerank iterations to eventually reach the final pageranks, we could instead try to find a steady state probability vector that corresponds to the final pageranks. 
 
