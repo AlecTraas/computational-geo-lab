@@ -149,5 +149,9 @@ In this week's meeting, Alec and Lam helped us get started on our capstone proje
 
 Today, Saturday 3/16, I have been struggling to clear up an issue that has gone under the radar in my code for quite some time. A while ago, I identified that there exist indexing issues within my program stemming from the resizing of the global `points` array. In [testing](https://colab.research.google.com/drive/1dS4k5Yes62GSvN-7cx40jfRff217FLMT?usp=sharing) my solution, I discovered a fatal flaw with the `clear_internal_points()` function. For a few uniquely-situated points, their position relative to the polyhedron is incorrectly identified. That is, some points which are inside are marked as outside, and vice versa. I just now, 5 or so hours later, figured out what has been going wrong with my code. Where I should have been evaluating $f_n\cdot(p-f_c)$, I was mistakenly calculating $(f_c-h_c)\cdot(p-f_c)$ (where $f_n=$ facet normal, $f_c=$ facet centroid, $h_c=$ hull centroid, and $p=$ point). After fixing that and a few other small tweaks, `clear_internal_points()` is, as far as I can tell, complete.
 
-## Week 7 (3/20 - 3/27)
+## Week 8 (3/20 - 3/27)
+The main event of this week was our meeting with the UVA Math Club, where we demonstrated what algorithms we've been working on in Geometry Lab. I particularly liked Matthew's demonstration of pagerank, as I found it to be quite engaging and interesting in subject matter. Unfortunately, our demonstrations of the 2d convex hull algorithms seemed to have fallen through, for the most part due to structural issues with the thumbtacks.
+
+As for my work on convex hulls, I have spent this week largely focused on trying to get Weisman's API working on my machine and coming up with my own formula for the angle between intersecting geodesics. I have been relatively unsuccessful in both.
+
 [cool demo](https://www.geogebra.org/m/Z4SWyEnC)
