@@ -45,8 +45,8 @@ After our meeting on 3/13, I finalized my capstone idea of exploring the page ra
 
 ## Week 7
 
-For this week, I mainly focused on preparing materials to demonstrate the PageRank algorithm for the Math Club meeting yesterday. To demonstrate the PageRank algorithm, I drew out a scaled down network that I could run through a couple iterations of PageRank to showcase the algorithm's general idea and purpose. In order to showcase the shifting PageRanks of each node, I used Cheerios to represent the weight / pagerank of each node during each iteration. Thus after each iteration, I would rearrange the Cheerios across the nodes to showcase the pageRank of each node changing. 
+For this week, I mainly focused on preparing materials to demonstrate the PageRank algorithm for the Math Club meeting yesterday. To demonstrate the PageRank algorithm, I drew out a scaled down network that I could run through a couple iterations of PageRank to showcase the algorithm's general idea and purpose. In order to showcase the shifting PageRanks of each node, I used Cheerios to represent the weight / pagerank of each node during each iteration. Thus after each iteration, I would rearrange the Cheerios across the nodes to showcase the pageRank of each node changing. In addition to this physical visual, I also created a couple of slides to showcase the formula used to find the pageRanks, as well as listing out PageRank values of this graph as we continue to iterate this algorithm. [Link to slides](https://docs.google.com/presentation/d/1tQokZxLaw0Vm2p3h4fergDCG6TZ40C4z1ovSASbx-jE/edit?usp=sharing)
 
 ![430E367E-E338-40CD-BC51-A4A5207C71C3_1_105_c](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/cd2b1e69-c7f3-4c25-a327-682c048342fa)
 
-*Weighted digraph visual I used as a basis to showcase the PageRank algorithm, representing the weights / pageranks as the amount of Cheerios*
+<sub>*Weighted digraph visual I used as a basis to showcase the PageRank algorithm, representing the weights / pageranks as the amount of Cheerios*</sub>
