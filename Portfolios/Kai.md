@@ -152,6 +152,6 @@ Today, Saturday 3/16, I have been struggling to clear up an issue that has gone 
 ## Week 8 (3/20 - 3/27)
 The main event of this week was our meeting with the UVA Math Club, where we demonstrated what algorithms we've been working on in Geometry Lab. I particularly liked Matthew's demonstration of pagerank, as I found it to be quite engaging and interesting in subject matter. Unfortunately, our demonstrations of the 2d convex hull algorithms seemed to have fallen through, for the most part due to structural issues with the thumbtacks.
 
-As for my work on convex hulls, I have spent this week largely focused on trying to get Weisman's API working on my machine and coming up with my own formula for the angle between intersecting geodesics. I have been relatively unsuccessful in both.
+As for my work on convex hulls, I have spent this week largely focused on trying to get Weisman's API working on my machine and coming up with my own formula for the angle between intersecting geodesics. I have been unable to get `geometry-tools` working on my computer due to my poor understanding of relative paths. I have, however, been relatively successful in creating a method for finding the angle between geodesic segments, as I noted in [this](https://www.desmos.com/calculator/pow2ovw2tw) Desmos workspace. There is probably a cleaner or cleverer method (using inverse hyperbolic trig functions, I presume), that I missed in my Euclidean blindness. 
 
 [cool demo](https://www.geogebra.org/m/Z4SWyEnC)
