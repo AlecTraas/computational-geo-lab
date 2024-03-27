@@ -37,12 +37,12 @@ I also read through some parts of the textbook chapter on Voronoi Diagrams. Give
 ![Screenshot (54)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/99d6a62c-8650-4bf6-99f2-44253c0e497e)
 ![Screenshot (55)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/3dcfaaff-57fa-4aa9-afda-c59951bc9249)
 
-## Week 4 & Spring Break (2/23-3/10)
+## Week 4 & Spring Break (2/23-3/13)
 This week, the main focus was on completing my slides and preparing for the upcoming presentation to the rest of the Geometry Lab group. We decided on the split of slides (who is presenting what). I presented on the introduction and applications of Convex Hulls, and then about the GiftWrapping Algorithm, and in which scenarios it is more efficient to use the "four quadrant" variation of the GiftWrapping approach. 
 Over Spring Break, I worked my way through sections of the textbook on Voronoi Diagrams and watched a few YouTube tutorials to fully understand the algorithm used to produce it. In essence, this Fortune's Algorithm involves a downward flowing horizontal line, and a beach line recording the Voronoi Diagram, and utilizes a binary search tree and priority queue. Every time the line comes across an event, there are two options: that it comes across a new site that must be added to the Diagram, or two neighboring cells are completely surrounded by a third cell, and must then be adjusted to reflect the correct Voronoi. As the horizontal line flows down it comes across all sites and the beach line reflects the shape of a parabola with the focus at the site and the directrix being the horizontal line. 
 I also spent some time thinking about the Least Cost Path problem, considering cases where you can "jump" from one path to another and when you cannot. One of my ideas is to set a benchmark, or some upper limit so that the path may not be the most efficient, but it is "efficient enough" and if so, then for the second case we can use a moving average of the upper limit that increases as we pass through each node. Another idea I had with regards was to model each sequential node as a normal distribution with N follows (n*u/N, (u/N)^2) where n is the nth node, u is the upper limit, and N is the total number of nodes. We eliminate paths that exceed 1.5 standard deviations, thus ending with a suitable path without having to check and follow the sum of each and every node. This method does assume that no such node exists that completely overpowers the other nodes. 
 
-## Week 5 (3/11-3/18)
+## Week 5 (3/13-3/20)
 This week, I worked on preparing myself to write code for Fortune's Algorithm. I spent some time getting a high level overview of binary search trees and priority queues. A binary search tree is a structure where we sort an array such that there exists one "parent" node which has a left and a right branch and that satisfies the following two conditions: 
 1) the "daughter" nodes also each have two "daughter" nodes of their own
 2) the left node is always less than the parent node, and the right node is always greater than the parent node.
@@ -50,3 +50,21 @@ As so:
 ![Screenshot (59)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/37c26943-dcd2-4ef4-9814-62297a6ee504)
 The binary search tree helps in adding sites that the sweep line encounters and maintaining and updating the voronoi arcs correctly, including the insertion and "expansion" of arcs, as well as the removal of arcs when a circle event occurs.
 I also explored Dijkstra's Algorithm to compute the shortest path connecting all sites. It basically iterates through all the possible paths before choosing the path of least cost from the source to the destination, and then does the same again from the new source, the original destination. It also picks destinations via the same method of evaluating all possible nodes and identifying the least cost path.
+
+## Week 6 (3/21-3/27)
+This week, I spent some time learning about NetworkX, the most popular python library for graphs. NetworkX will be quite useful when attempting my application of Voronoi Diagrams to soccer formations, since the initial positions of players can be represented in terms of graphs. After playing a little bit with the basic syntax and code structure, I generated an image for a basic 1-4-3-3 formation in soccer, one of the most popular formations in use today. 
+
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/2c3e36b5-1dc3-437a-a153-0a6dc8f10883)
+
+
+I then worked on a mini-manual Voronoi Diagram for the same, currently taking into account only the nodes 1,2,3,4,5. In soccer, this is the defensive line and the goalkeeper, and, arguably where positioning and hence Voronoi Diagrams to come up with strategies are most useful. In the future, the goal is to construct a Voronoi Diagram for the full 11 players (either through my in-progress algorithm if possible, or through manual implementation of the sweep line method). This was the product (where the edges represent the boundaries of the Voronoi Diagram for these 5 nodes only):
+
+![Screenshot (62)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/4d239f24-4e52-43c1-9cfe-5c2494ac7727)
+
+I also spent some time thinking about my presentation at the Math Club/AWM meeting. In soccer, "heat maps" are visuals that represent the average position of a player, with the darker colors representing higher density. 
+
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/0cb11eb6-c66b-4ed0-89f6-4f8c6bac234f)
+
+This is the heatmap for Virgil Van Dijk, from his debut for Liverpool. As can be seen, his heatmap from that game, if overlayed on the Voronoi Diagram above almost perfectly overlaps for the defensive aspects. At the time, Liverpool used a 1-4-3-3 system, so we can see why Virgil Van Dijk was a great addition, since his positioning almost perfectly captures what was required of him positionally in that system according to the Voronoi Diagram generated
+
+
