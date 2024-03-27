@@ -109,9 +109,9 @@ This week, we focus on the second presentation to the AWM and the Math Club. We 
 
 ![image](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/3f470c82-3d50-46fb-9c06-0f3d8620cdf4)
 
-Above is a picture from a video I found to introduce the application of line segment intersection problem.
+I recently discovered a video that introduces the real-life applications of the line segment intersection problem. One compelling example detailed in the video is how this problem can be utilized to determine the intersections between a river and a planned road. By identifying these intersection points, we can strategically determine the optimal locations for bridge construction, thereby efficiently planning the number and placement of bridges needed to facilitate transportation without disrupting natural waterways.
 
-In response to rigorous code testing, I've identified the necessity for refinement to ensure its applicability in more generalized scenarios. The focus ahead is on enhancing the algorithm's ability to precisely determine intersection points across a broader range of cases. This step is critical for moving from theoretical exploration to practical application, setting the stage for future developments aimed at refining the algorithm's accuracy and utility.
+Furthermore, for the code part, I've identified the necessity for refinement to ensure its applicability in more generalized scenarios. The focus ahead is on enhancing the algorithm's ability to precisely determine intersection points across a broader range of cases. This step is critical for moving from theoretical exploration to practical application, setting the stage for future developments aimed at refining the algorithm's accuracy and utility.
 
 
 
