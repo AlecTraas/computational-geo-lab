@@ -107,6 +107,9 @@ Currently, my implementation can determine the existence of line segments but fa
 ## Week 7 (3/20 - 3/27)
 This week, we focus on the second presentation to the AWM and the Math Club. We use the situation similar to poster session in this time.  I introduced the Sweep Line algorithm, emphasizing its significance in solving real-world problems through the detection of line intersections. This session not only illuminated the practical applications of theoretical concepts but also marked the beginning of the next phase of my research.
 
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/3f470c82-3d50-46fb-9c06-0f3d8620cdf4)
+Above is a picture from a video I found to introduce the application of line segment intersection problem.
+
 In response to rigorous code testing, I've identified the necessity for refinement to ensure its applicability in more generalized scenarios. The focus ahead is on enhancing the algorithm's ability to precisely determine intersection points across a broader range of cases. This step is critical for moving from theoretical exploration to practical application, setting the stage for future developments aimed at refining the algorithm's accuracy and utility.
 
 
