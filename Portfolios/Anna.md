@@ -103,3 +103,11 @@ Additionally, I explored practical implementations, such as a C++ code example o
 ![SegmentIntersect-1](https://github.com/AlecTraas/computational-geo-lab/assets/97414774/9bce4403-1bf9-402b-be03-06b4428a37f9)
 
 Currently, my implementation can determine the existence of line segments but falls short in accurately identifying and exporting intersections. The next phase of development will focus on refining this capability, with an emphasis on outputting identified intersections efficiently.
+
+## Week 7 (3/20 - 3/27)
+This week, we focus on the second presentation to the AWM and the Math Club. We use the situation similar to poster session in this time.  I introduced the Sweep Line algorithm, emphasizing its significance in solving real-world problems through the detection of line intersections. This session not only illuminated the practical applications of theoretical concepts but also marked the beginning of the next phase of my research.
+
+In response to rigorous code testing, I've identified the necessity for refinement to ensure its applicability in more generalized scenarios. The focus ahead is on enhancing the algorithm's ability to precisely determine intersection points across a broader range of cases. This step is critical for moving from theoretical exploration to practical application, setting the stage for future developments aimed at refining the algorithm's accuracy and utility.
+
+
+
