@@ -141,4 +141,22 @@ My next goal is to ensure the algorithm works on points that share variable valu
 
 To fix this, I am defining an ordering for nodes through a compareTo method. Instead of just comparing based on the current variable value, it will compare on current variable value, then the next if they are equal, then the next, etc. This ensures that points will be placed on the side of the median we expect them to, unless there are multiple points with all the same variable values. However, in a database, points have a unique "id" identifier so all variables of separate points can never be equal.
 
-Furthermore, I would like to look into optimizations for this strategy, like fractional cascading, and what methods could be used for range queries that are not orthogonal.
+Furthermore, I would like to look into optimizations for this strategy, like fractional cascading, and what methods could be used for range queries that are not orthogonal. I also want to look into how to a efficiently add points to a range tree. 
+
+## Week 7
+
+This week we prepared for a presentation for the UVA Math Club about our current progress. We tried to focus on hands-on activities to more intuitively explain our algorithms. For our convex hull algorithms, we did this using thumbtacks, string, rubber bands, and a bulletin board. We first showed an intuitive visual of what a convex hull is by expanding a rubber band around a collection of thumbtacks, representing our points. The polygon formed by the band represents a 2D convex hull.
+
+While this is a good visualization for people, it's not practical for computers. This led us into our giftwrapping algorithm. We started with the leftmost point which is guarantted to be on the hull and tacked the string to the board. We then continued wrapping the string around the tack that had the minimum angle to the previous segment until we ended back up at our original point.
+
+We next displayed the graham scan algorithm. We started with the string at the bottom most point and scanned through the points in order of polar angle to this base point. We kept doing this, making sure we were always forming a convex, counter clockwise turn. Otherwise, we would backtrack to fix our hull such that every connection fit these constraints. We did this until reaching the point with the maximum angle.
+
+Lastly, we displayed the quickhull algorithm using rubber bands. We started with the rubber band connecting the lowest and highest y value tacks. We then split the problem in two. For each subhalf, we added the point furthest from the line to the hull to form a polygon. For each side, we found the furthest point away that was not yet enclosed by the polygon and added it. We repeated this process until all points were enclosed.
+
+As for my personal project this week, I focused on allowing for repeated values for points. I did this by defining a custom comparator and sorting method to implement it. The new comparator compares the current index being compared first. If and only if this is equal, it compares on the next index values. If the subsequent values are the same, then it compares on the next, and so on. As a result, the points are only considered equal if all of their values are the same. If the points have different values at the index, it works the same as a regular integer compare method.
+
+Implementing this allows me to search for values even if multiple have the same index value. In previous iterations, this was not the case. Consider if we make a tree on index i and the median value of i is shared by three points. Theoretically, these points can span both sides of the median. However, when traversing the tree, we would expect all points with value greater than or equal to the median be in the right subtree.
+
+In the new iteration, we compare the other values in addition to the value at i. If the previous case still occurs, the new sorting algorithm will make sure that whatever is left of the median has a lesser comparison value than the median. This way, if we are looking for a point, we will always know which subtree it will be in regardless of whether or not it shares a value.
+
+My next goals for the project are to explore added efficiency from fractional cascading. Additionally, I want to determine if there are efficient ways to add points to the range tree while keeping its structure so that we do not need to recalculate it every time the list of points changes. I also would like to explore changing the sorting comparator to allow the algorithm to work for non-orthogonal queries. As of now, I am unsure whether or not this is possible. However, I feel that we may be able to compare each i value to an expected or boundary value which may allow us to search the tree.
