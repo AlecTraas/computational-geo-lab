@@ -155,3 +155,17 @@ The main event of this week was our meeting with the UVA Math Club, where we dem
 As for my work on convex hulls, I have spent this week largely focused on trying to get Weisman's API working on my machine and coming up with my own formula for the angle between intersecting geodesics. I have been unable to get `geometry-tools` working on my computer due to my poor understanding of relative paths. I have, however, been relatively successful in creating a method for finding the angle between geodesic segments, as I noted in [this](https://www.desmos.com/calculator/pow2ovw2tw) Desmos workspace. There is probably a cleaner or cleverer method (using inverse hyperbolic trig functions, I presume), that I missed in my Euclidean blindness. This is something I would really like to discuss in this afternoon's group meeting.
 
 In my research of the upper half plane model, I found this [cool demo](https://www.geogebra.org/m/Z4SWyEnC) I couldn't help but share.
+
+## Week 9 (3/27 - 4/3)
+In this week's meeting we further worked on our capstone projects, where Alec and Lam helped me finalize the math behind $\mathbb{H}^2$ Gift Wrapping algorithm. A very useful resource for finding hyperbolic distance and angle formulae was the Warwick University [Math 448 Textbook](https://homepages.warwick.ac.uk/~masbb/Papers/MA448.pdf), which outlined the following:
+```math
+\displaylines{\text{given two points $z_1$, $z_2$ $\in \mathbb{H}$ we have:}
+\\\\
+d_{\mathbb{H}}(z_1,z_2)=\ln\frac{|z_1-\bar{z_2}|+|z_1-z_2|}{|z_1-\bar{z_2}|+|z_1-z_2|}
+\\\\
+\text{and}
+\\\\
+\text{given side lengths $a$, $b$, and $c$, $\gamma$ is the angle opposite $c$:}
+\\\\
+\gamma=\arccos\frac{\cosh a\cosh b\,-\,\cosh c}{\sinh a \sinh b}}
+```
