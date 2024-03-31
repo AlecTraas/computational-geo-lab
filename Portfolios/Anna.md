@@ -113,5 +113,13 @@ I recently discovered a video that introduces the real-life applications of the 
 
 Furthermore, for the code part, I've identified the necessity for refinement to ensure its applicability in more generalized scenarios. The focus ahead is on enhancing the algorithm's ability to precisely determine intersection points across a broader range of cases. This step is critical for moving from theoretical exploration to practical application, setting the stage for future developments aimed at refining the algorithm's accuracy and utility.
 
+## Week 8 (3/27 - 4/3)
 
+During this week's group meeting, I addressed a critical issue where our code was previously only identifying a single intersection point. I've now refined the algorithm, enabling it to accurately detect and output all intersections of the given segment.
+
+Furthermore, to enhance the visualization aspect, I've implemented a strategy for labeling each line segment with a unique number, facilitating easier verification of the code's accuracy. Following Lam's suggestion, I experimented with the matplotlib.pyplot.text function. After several iterations and adjustments, I successfully integrated a mechanism to automatically label every line in the generated graph. This improvement not only aids in our internal testing but also adds a layer of clarity to our visual output, making it more intuitive to assess the algorithm's performance.
+
+<img width="622" alt="截屏2024-03-30 下午11 17 33" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/ab4ea8f0-3d98-4299-8033-1585fca73723">
+
+In the next phase of our project, I plan to focus on precisely determining the position of each intersection point. This advancement will significantly enhance the accuracy and utility of our algorithm. Additionally, I aim to explore potential applications of line intersection analysis, such as creating heat maps. This exploration will not only broaden the applicability of our work but also contribute to a deeper understanding of how these intersections can be leveraged in various contexts.
 
