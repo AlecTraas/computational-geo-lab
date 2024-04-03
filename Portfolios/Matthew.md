@@ -71,4 +71,4 @@ current_page_ranks = np.array(updated_page_ranks)
 ```
 
 
-After finishing this troubleshooting, I went ahead and added the damping factor throughout the algorithm. This was actually a pretty easy change to execute, as it only required an additional input of the damping factor, d, when calculating the individual page ranks for each iteration from one node to the next.
+After finishing this troubleshooting, I went ahead and added the damping factor throughout the algorithm. This was actually a pretty easy change to execute without the need for a lot of troubleshooting, as it only required an additional input of the damping factor, d, when calculating the individual page ranks for each iteration from one node to the next
