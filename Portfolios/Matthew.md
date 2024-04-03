@@ -63,9 +63,10 @@ For this week, I wrapped up troubleshooting my basic PageRank algorithm. I found
 ```python
 
 current_page_ranks = updated_page_ranks
-# This would not work, even though both are numpy arrays
+# This would not work, even though both are casted as numpy arrays
+
 current_page_ranks = np.array(updated_page_ranks)
-# This would work 
+# Recasting the updated_page_ranks again as a numpy array again would output correct values
 ```
 
 After finishing this troubleshooting, I went ahead and added the damping factor throughout the algorithm. This was actually a pretty easy change to execute, as it only required an additional input of the damping factor, d, within the algorithm,
