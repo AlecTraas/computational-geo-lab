@@ -63,10 +63,10 @@ For this week, I wrapped up troubleshooting my basic PageRank algorithm. I found
 #### Ex:
 ```python
 
-current_page_ranks = updated_page_ranks
+current_prob_dist = update_prob_dist
 # This would not work, even though both are casted as numpy arrays
 
-current_page_ranks = np.array(updated_page_ranks)
+current_prob_dist = np.array(update_prob_dist)
 # Recasting the updated_page_ranks again as a numpy array again would output correct values
 ```
 
