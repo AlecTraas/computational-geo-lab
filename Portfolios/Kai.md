@@ -156,12 +156,12 @@ As for my work on convex hulls, I have spent this week largely focused on trying
 
 In my research of the upper half plane model, I found this [cool demo](https://www.geogebra.org/m/Z4SWyEnC) I couldn't help but share.
 
-## Week 9 (3/27 - 4/3)
+## Week 9-10 (3/27 - 4/10)
 In this week's meeting we further worked on our capstone projects, where Alec and Lam helped me finalize the math behind $\mathbb{H}^2$ Gift Wrapping algorithm. A very useful resource for finding hyperbolic distance and angle formulae was the Warwick University [Math 448 Textbook](https://homepages.warwick.ac.uk/~masbb/Papers/MA448.pdf), which outlined the following:
 ```math
 \displaylines{\text{given two points $z_1$, $z_2$ $\in \mathbb{H}$ we have:}
 \\\\
-d_{\mathbb{H}}(z_1,z_2)=\ln\frac{|z_1-\bar{z_2}|+|z_1-z_2|}{|z_1-\bar{z_2}|+|z_1-z_2|}
+d_{\mathbb{H}}(z_1,z_2)=\ln\frac{|z_1-\bar{z_2}|+|z_1-z_2|}{|z_1-\bar{z_2}|-|z_1-z_2|}
 \\\\
 \text{and}
 \\\\
@@ -169,3 +169,4 @@ d_{\mathbb{H}}(z_1,z_2)=\ln\frac{|z_1-\bar{z_2}|+|z_1-z_2|}{|z_1-\bar{z_2}|+|z_1
 \\\\
 \gamma=\arccos\frac{\cosh a\cosh b\,-\,\cosh c}{\sinh a \sinh b}}
 ```
+Over my spring break, I've continued to try to get `geometry-tools` working. Unfortunately, I've come to the conclusion that there is something inherently broken with the code, and that I must use a different package.
