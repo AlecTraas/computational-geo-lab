@@ -71,4 +71,8 @@ current_page_ranks = np.array(updated_page_ranks)
 ```
 
 
-After finishing this troubleshooting, I went ahead and added the damping factor throughout the algorithm. This was actually a pretty easy change to execute without the need for a lot of troubleshooting, as it only required an additional input of the damping factor, d, when calculating the individual page ranks for each iteration from one node to the next
+After finishing this troubleshooting, I went ahead and added the damping factor throughout the algorithm. This was actually a pretty easy change to execute without the need for a lot of troubleshooting, as it only required an additional input of the damping factor, d, when calculating the individual page ranks for each iteration from one node to the next.
+
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/84047edf-4a63-4b67-9e2d-3438695718a8)
+
+<sub> For each individual pagerank, I implemented this formula where d is the damping factor, and N is the total number of pages / nodes <sub>
