@@ -60,6 +60,7 @@ I would also like to try implementing a more complex version of the pagerank alg
 
 For this week, I wrapped up troubleshooting my basic PageRank algorithm. I found most of the issues I was running into were Python-oriented rather than logical problems, which made the trouble shooting process much more difficult than I originally anticipated. For example, when updating my pagerank distributions for the next iteration of the algorithm, I was running into an issue where the correct values were not being outputted. This turned out to be an issue in the setting the updated pageranks as the current pageranks for the next iteration. Instead, I had to recast the updated pageranks as a numpy array again and then set these values as the current pageranks for this code to execute (kind of strange, but it works :) ). 
 
+#### Ex:
 ```python
 
 current_page_ranks = updated_page_ranks
@@ -69,4 +70,5 @@ current_page_ranks = np.array(updated_page_ranks)
 # Recasting the updated_page_ranks again as a numpy array again would output correct values
 ```
 
-After finishing this troubleshooting, I went ahead and added the damping factor throughout the algorithm. This was actually a pretty easy change to execute, as it only required an additional input of the damping factor, d, within the algorithm,
+
+After finishing this troubleshooting, I went ahead and added the damping factor throughout the algorithm. This was actually a pretty easy change to execute, as it only required an additional input of the damping factor, d, when calculating the individual page ranks for each iteration from one node to the next.
