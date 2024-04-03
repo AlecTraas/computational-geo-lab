@@ -78,3 +78,6 @@ After finishing this troubleshooting, I went ahead and added the damping factor 
 ![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364295/84047edf-4a63-4b67-9e2d-3438695718a8)
 
 <sub> For each individual pagerank, I implemented this formula where d is the damping factor, and N is the total number of pages / nodes <sub>
+
+
+Moving forward, I feel like I want to build up one more graph algorithm before the end of the semester. Right now, I am thinking of building a shortest path algorithm (like Dijkstra's algorithm) or finding a way of determining if a graph contains a eulerian path or circuit within a given graph.
