@@ -55,3 +55,16 @@ For this week, I mainly focused on preparing materials to demonstrate the PageRa
 I have also finished the bulk of my simplified pagerank algorithm, and am troubleshooting the algorithm to completely finalize it. While my algorithm currently ends by checking the difference between the previous iteration pageranks and current iteration pageranks is small enough, I would like to try implementing this algorithm as a stochastic process using linear algebra. This way, rather than relying on doing some large amount of pagerank iterations to eventually reach the final pageranks, we could instead try to find a steady state probability vector that corresponds to the final pageranks. 
 
 I would also like to try implementing a more complex version of the pagerank algorithm through the addition of a damping factor. This damping factor allows for a little more randomness within the network, as in the context of web browsing, the addition of a damping factor simulates web surfers randomly jumping to different websites, even if the two websites are not linked. I feel this would be a great next step to take in scaling up my simplified version of the pagerank algorithm.
+
+## Week 8
+
+For this week, I wrapped up troubleshooting my basic PageRank algorithm. I found most of the issues I was running into were Python-oriented rather than logical problems, which made the trouble shooting process much more difficult than I originally anticipated. For example, when updating my pagerank distributions for the next iteration of the algorithm, I was running into an issue where the correct values were not being outputted. This turned out to be an issue in the setting the updated pageranks as the current pageranks for the next iteration. Instead, I had to recast the updated pageranks as a numpy array again and then set these values as the current pageranks for this code to execute (kind of strange, but it works :) ). 
+
+'''
+current_page_ranks = updated_page_ranks
+# This would not work, even though both are numpy arrays
+current_page_ranks = np.array(updated_page_ranks)
+# This would work 
+'''
+
+After finishing this troubleshooting, I went ahead and added the damping factor throughout the algorithm. This was actually a pretty easy change to execute, as it only required an additional input of the damping factor, d, within the algorithm,
