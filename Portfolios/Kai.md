@@ -169,4 +169,4 @@ d_{\mathbb{H}}(z_1,z_2)=\ln\frac{|z_1-\bar{z_2}|+|z_1-z_2|}{|z_1-\bar{z_2}|-|z_1
 \\\\
 \gamma=\arccos\frac{\cosh a\cosh b\,-\,\cosh c}{\sinh a \sinh b}}
 ```
-Over my spring break, I've continued to try to get `geometry-tools` working. Unfortunately, I've come to the conclusion that there is something inherently broken with the code, and that I must use a different package.
+Over my spring break, I've continued to try to get `geometry-tools` working. Unfortunately, I've come to the conclusion that there is something inherently broken with the code, and that I must use a different package. One comparable (though far worse documented) package is Casey Duckering's [hyperbolic](https://github.com/cduck/hyperbolic), which I will--going forward--attempt to get functional.
