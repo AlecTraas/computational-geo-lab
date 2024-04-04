@@ -67,4 +67,18 @@ I also spent some time thinking about my presentation at the Math Club/AWM meeti
 
 This is the heatmap for Virgil Van Dijk, from his debut for Liverpool. As can be seen, his heatmap from that game, if overlayed on the Voronoi Diagram above almost perfectly overlaps for the defensive aspects. At the time, Liverpool used a 1-4-3-3 system, so we can see why Virgil Van Dijk was a great addition, since his positioning almost perfectly captures what was required of him positionally in that system according to the Voronoi Diagram generated
 
+## Week 7 (3/28-4/3)
+
+This week, I spent some time familiarizing myself with priority queues and heapq, a library that creates a heap and is primarily used to create priority queues. A priority queue is a type of binary search tree where the parent node is less than each of its children nodes. Hence, the source (super-parent) node is the least, and the tree goes from there. 
+
+![Screenshot (65)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/ee03a0fe-42f1-455f-b7e9-9c8f43c98d23)
+
+I also spent some time beginning to code my Voronoi Diagram:
+
+![Screenshot (66)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/4cb4975c-e460-4caa-ba71-c2025e93b38e)
+
+The parabola function returns the y-coordinate of a parabola given its focus, directrix, x-coordinate and width as parameters, and the intersection function determines the intersection of these parabolas with focus points p1,p2 and the directrix (the sweep line)
+
+
+
 
