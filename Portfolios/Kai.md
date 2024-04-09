@@ -172,3 +172,19 @@ d_{\mathbb{H}}(z_1,z_2)=\ln\frac{|z_1-\bar{z_2}|+|z_1-z_2|}{|z_1-\bar{z_2}|-|z_1
 Over my spring break, I've continued to try to get `geometry-tools` working. Unfortunately, I've come to the conclusion that there is something inherently broken with the code, and that I must use a different package. One comparable (though far worse documented) package is Casey Duckering's [hyperbolic](https://github.com/cduck/hyperbolic), which I will--going forward--attempt to get functional.
 
 Over 4/6, I'd decided it would be best for me to completely start over. With Wiesman's code being inoperable and Duckering's being entirely undocumented and overly confusing, I thought it best for me to start with a clean slate, working with task-specific code that I understand. So far, I completed the code for rendering to the upper half plane model, and I expect the actual math stuff (Cayley transform, angle, distance) to be relatively simple to implement.
+
+Yesterday (4/8), I finally completed implementing the Gift Wrapping algorithm in the upper half plane. It's nice to have something to show for the work I've put in, especially as I've had to do loads of boring debugging with 3d Quickhull. At this point, all I have left to implement is the function for drawing geodesics in the Poincare disc. I have been struggling with this for a bit, but after doing some research I found a really helpful method for constructing them:
+
+For points $a$ and $b$ in the unit circle:
+
+1. Get the reflection of point $a$ about the circle:
+```math
+c = \frac{a}{||a||^2}
+```
+2. Get the circumcircle of the triangle $abc$:
+    a. Get the pependicular bisector for sides $a$ and $b$:
+```math
+p_a
+\\
+p_b
+```
