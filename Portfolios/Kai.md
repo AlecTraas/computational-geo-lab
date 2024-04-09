@@ -182,9 +182,10 @@ For points $a$ and $b$ in the unit circle:
 c = \frac{a}{||a||^2}
 ```
 2. Get the circumcircle of the triangle $abc$:
-    a. Get the pependicular bisector for sides $a$ and $b$:
+
+    a. Get the pependicular bisectors for sides $a$ and $b$
+    b. Set them equal to one another (returning the origin)
+3. With the origin and two edge points, we can determine the equation of the circle:
 ```math
-p_a
-\\
-p_b
+(x-o_x)^2+(y-o_y)^2=\text{dist($a,o$)}^2
 ```
