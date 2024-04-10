@@ -128,4 +128,9 @@ In the next phase of the project, I plan to focus on precisely determining the p
 
 During last week's group meeting, Lam gave me advice on the command code for solving linear equations. Inspired by this, I focused on adjusting the code to output the position of the intersection points as the final product. This week, I worked on adjusting some definitions within the code and revisited the numpy command book to find appropriate commands to apply. Furthermore, I made slight adjustments to the graph output code in order to enhance clarity and readability. 
 
+<img width="929" alt="截屏2024-04-10 下午4 28 27" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/99b97f93-607f-4e6e-9888-b1f7319fdf12">
+
+
 <img width="859" alt="截屏2024-04-10 下午4 27 49" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/9b130607-9489-4cad-bae8-2cd2caa37415">
+
+
