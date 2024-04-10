@@ -79,6 +79,30 @@ I also spent some time beginning to code my Voronoi Diagram:
 
 The parabola function returns the y-coordinate of a parabola given its focus, directrix, x-coordinate and width as parameters, and the intersection function determines the intersection of these parabolas with focus points p1,p2 and the directrix (the sweep line)
 
+## Week 8 (4/4-4/11)
+
+This week, I finished up my implementation of my Voronoi Diagram algorithm. My algorithm is based on the fact that Delaunay Triangulations and Voronoi Diagrams can be generated from each other (are dual graphs of each other). 
+Delaunay Triangulation: for a given set of discrete points, the Delaunay Triangulation is such that no fourth point in P lies within the circumcircle of any triangle formed by three points in P. 
+
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/3727dc59-b9a3-4b7b-a66a-66fdea711204)
+
+If we connect the circumcentres of these circumcircles, we produce the Voronoi Diagram of P. This can be further explained by the fact that if two triangles in the Delaunay Triangulation share an edge, connecting their circumcentres produces a Voronoi edge. 
+
+![image](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/b3dc67f3-fc93-4ade-a8c8-1c5a4823f9c7)
+
+Here is my implementation: 
+
+![Screenshot (74)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/464a627c-c732-437a-993d-f10f0266114a)
+![Screenshot (71)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/3a5cb5d4-445c-461f-872c-4efa6395341f)
+![Screenshot (72)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/75d432b1-d2ac-4d59-a5bc-caec5e27a79e)
+![Screenshot (73)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/1c44a818-3915-4db6-aa0d-5391b75b02d1)
+
+
+
+
+
+
+
 
 
 
