@@ -81,3 +81,10 @@ After finishing this troubleshooting, I went ahead and added the damping factor 
 
 
 Moving forward, I feel like I want to build up one more graph algorithm before the end of the semester. Right now, I am thinking of building a shortest path algorithm (like Dijkstra's algorithm) or finding a way of determining if a graph contains a eulerian path or circuit within a given graph.
+
+
+## Week 9
+
+This week, I continued to work on implementing the pagerank algorithm as a stochastic process using linear algebra. So far, I have been able to write a function that takes a graph and spits out its stochastic matrix counterpart, as well as transforming this matrix to account for the damping factor.
+
+But, I am currently running into an issue with the eigenvectors of this new, transformed matrix. Using numpy's builtin linear algebra library, I was able to find the eigenvalues and associated eigenvectors of the matrix. For a steady state probability vector, I am aiming to find an eigenvalue of 1 within these values, and luckily I am finding this eigenvalue as an output. Where I am running into an issue is with the associated eigenvector, which unfortunately does not resemble a probability vector as the sum is not equal to one.
