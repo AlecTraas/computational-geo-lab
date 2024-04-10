@@ -124,3 +124,8 @@ Furthermore, to enhance the visualization aspect, I've implemented a strategy fo
 
 In the next phase of the project, I plan to focus on precisely determining the position of each intersection point. It will significantly enhance the accuracy and utility of the project. Additionally, I aim to explore potential applications of line intersection analysis, such as map overlay.
 
+## Week 9 (4/3 - 4/10)
+
+During last week's group meeting, Lam gave me advice on the command code for solving linear equations. Inspired by this, I focused on adjusting the code to output the position of the intersection points as the final product. This week, I worked on adjusting some definitions within the code and revisited the numpy command book to find appropriate commands to apply. Furthermore, I made slight adjustments to the graph output code in order to enhance clarity and readability. 
+
+<img width="859" alt="截屏2024-04-10 下午4 27 49" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/9b130607-9489-4cad-bae8-2cd2caa37415">
