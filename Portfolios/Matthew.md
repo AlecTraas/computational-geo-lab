@@ -87,4 +87,11 @@ Moving forward, I feel like I want to build up one more graph algorithm before t
 
 This week, I continued to work on implementing the pagerank algorithm as a stochastic process using linear algebra. So far, I have been able to write a function that takes a graph and spits out its stochastic matrix counterpart, as well as transforming this matrix to account for the damping factor.
 
+
+<img width="709" alt="image" src="https://github.com/AlecTraas/computational-geo-lab/assets/158364295/99c46ce8-b939-441f-86ce-e59ace91578d">
+
+<sub> This is the code that generates the transformed stochastic matrix when incorporating the damping factor, d. As the column vectors of this matrix sum to 1, we can tell this transformed matrix is also a stochastic matrix in its own right <sub>
+
+
+
 But, I am currently running into an issue with the eigenvectors of this new, transformed matrix. Using numpy's builtin linear algebra library, I was able to find the eigenvalues and associated eigenvectors of the matrix. For a steady state probability vector, I am aiming to find an eigenvalue of 1 within these values, and luckily I am finding this eigenvalue as an output. Where I am running into an issue is with the associated eigenvector, which unfortunately does not resemble a probability vector as the sum is not equal to one.
