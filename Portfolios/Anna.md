@@ -134,3 +134,9 @@ During last week's group meeting, Lam gave me advice on the command code for sol
 <img width="859" alt="截屏2024-04-10 下午4 27 49" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/9b130607-9489-4cad-bae8-2cd2caa37415">
 
 
+## Week 10 (4/10 - 4/17)
+
+Throughout this week, I focused on adjusting various definitions within the code and revisited the numpy command documentation to identify and apply appropriate commands. Furthermore, I made minor enhancements to the graph output code segment to randomize the segment positio. The culmination of these efforts has resulted in asolution capable of accurately determining and displaying the intersection points, complemented by a polished graphical output that prioritizes clarity and interpretability.
+
+<img width="834" alt="截屏2024-04-17 下午4 27 34" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/7cfb886d-d5c5-451f-a8f5-5cf114fbdd59">
+
