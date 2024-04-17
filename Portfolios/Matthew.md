@@ -95,3 +95,10 @@ This week, I continued to work on implementing the pagerank algorithm as a stoch
 
 
 But, I am currently running into an issue with the eigenvectors of this new, transformed matrix. Using numpy's builtin linear algebra library, I was able to find the eigenvalues and associated eigenvectors of the matrix. For a steady state probability vector, I am aiming to find an eigenvalue of 1 within these values, and luckily I am finding this eigenvalue as an output. Where I am running into an issue is with the associated eigenvector, which unfortunately does not resemble a probability vector as the sum is not equal to one.
+
+
+## Week 10
+
+This week I wrapped up my work on implementing the pagerank algorithm as a stochastic process. I found the issue I was running into last week (probability vector not adding to 1) was easily fixed after renormalizing the vector to sum to 1. This aligned the output I was receiving for my linear algebra pagerank algorithm with that of the pagerank output of my brunt force approach as well as the networkX version of the algorithm. 
+
+
