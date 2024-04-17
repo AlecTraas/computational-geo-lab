@@ -106,8 +106,11 @@ This week I wrapped up my work on implementing the pagerank algorithm as a stoch
 
 <sub> Example graph I used to test my algorithms<sub>
 
-<img width="558" alt="image" src="https://github.com/AlecTraas/computational-geo-lab/assets/158364295/de1f02fa-c3e5-41d3-8f64-d03eb640112a">
+<img width="570" alt="image" src="https://github.com/AlecTraas/computational-geo-lab/assets/158364295/e74bdcfa-713f-4ebd-ae5e-81a99eb139b3">
 
 <sub> Actual differences between pagerank algorithms (1st: brunt force approach, 2nd: linear algebra approach, 3rd: built-in networkX package)
 
+
+
+When actually comparing the output of pagerank algorithms of all three, I found that there wasn't actually that much of a difference between them. The linear algebra approach was the closest to the networkX pagerank algorithm though.
 
