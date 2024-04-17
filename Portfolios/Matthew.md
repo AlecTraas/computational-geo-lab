@@ -102,3 +102,12 @@ But, I am currently running into an issue with the eigenvectors of this new, tra
 This week I wrapped up my work on implementing the pagerank algorithm as a stochastic process. I found the issue I was running into last week (probability vector not adding to 1) was easily fixed after renormalizing the vector to sum to 1. This aligned the output I was receiving for my linear algebra pagerank algorithm with that of the pagerank output of my brunt force approach as well as the networkX version of the algorithm. 
 
 
+<img width="296" alt="image" src="https://github.com/AlecTraas/computational-geo-lab/assets/158364295/c904e9db-1120-4594-b54a-3bacb8c6d6b8">
+
+<sub> Example graph I used to test my algorithms<sub>
+
+<img width="558" alt="image" src="https://github.com/AlecTraas/computational-geo-lab/assets/158364295/de1f02fa-c3e5-41d3-8f64-d03eb640112a">
+
+<sub> Actual differences between pagerank algorithms (1st: brunt force approach, 2nd: linear algebra approach, 3rd: built-in networkX package)
+
+
