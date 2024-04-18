@@ -97,6 +97,13 @@ Here is my implementation:
 ![Screenshot (72)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/75d432b1-d2ac-4d59-a5bc-caec5e27a79e)
 ![Screenshot (73)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/1c44a818-3915-4db6-aa0d-5391b75b02d1)
 
+## Week 9 (4/12-4/19)
+
+This week, I spent the majority of my time debugging my Voronoi Diagram code. The issue with my previous implementation was that my code was incorrectly computing the Delauney triangulation, keeping all triangles instead of just the ones without any other point inside their vertices. This is my result:
+
+![Screenshot (85)](https://github.com/AlecTraas/computational-geo-lab/assets/158364293/5877d8bf-7219-431d-9cef-0051f7ca2d3e)
+
+I also spent some time writing pseudocode and beginning to code my Djikstra's Algorithm. Now that I'm a bit more familiar with class structures, this should be a bit smoother than my Voronoi Diagram process.
 
 
 
