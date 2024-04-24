@@ -181,3 +181,64 @@ Trivial Right Shift
 Larger Right shift
 ![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week8/rshift.png)
 
+These images were taken from Professor Brianna Morrisson's Data Structures and Algorithms 2023 Spring Slide Deck.
+
+## Week 10
+
+This week we pivoted into implementing shortest-path algorithms as a team. The main or most popular shortest path algorithm is Dijkstra's algorithm, which is a greedy breadth first search algorithm that works by traversing to the nearest unexplored node to the start and seeing if there are any paths to a node that are shorter than a previous one we have found. 
+
+Dijkstra's is performed on a graph, a collection of points, called vertices, where connections between points have a specified "weight." The shortest path between points is the one that minimizes the total weight of the edges it uses. We define one "start" node. We initially assume all vertices are an infinite distance from the start. The start is a distance of 0 from itself. From here, we visit the node that we have not visited yet that has the least distance from the start. We look at all the edges coming out of this node, and, of the edges that connect to a node we haven't visited, see if taking this route is faster than the shortest previous route (the distance to the current node + weight of edge < current shortest route). If so, update our distance from the start node value for that vertex. An example of how this works can be seen below:
+
+Remove the node with the shortest distance (initially the start node):
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dfirst.png)
+
+Update the distance of the top node to the new lowest distance:
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dfirstfirst.png)
+
+Update the distance of the top node to the new lowest distance:
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dsecond.png)
+
+Explore the node with the shortest distance:
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dthird.png)
+
+Reapeat this process:
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dfourth.png)
+
+End when all nodes have been visited:
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dfifth.png)
+
+These images were taken from Professor Robbie Hott's Data Structures and Algorithms 2 2024 Spring Slide Deck
+
+One common way to implement Dijkstra's algorithm is with a priority queue or minheap. Store all of the nodes in the collection based on their distance from the start, initially infinite. If you find a shorter path to a node, update its distance in the collection. When need to explore the next closest node, pop() the collection in O(logn) time.
+
+## Week 11
+
+This week we focused on making an efficient implementation of dijkstra's algorithm. To represent graphs, I used NetworkX, a common graph library in python. One of the inefficiencies of dijkstra's algorithm is decreasing the value of a node's distance in the collection. Because priority queues and minheaps only ensure that the first or root element is the minimum, we do not know where in our collection each element is stored. Thus, if we want to update its value, we must find it first, taking O(n) time. However, we can improve on this by storing pointers to the elements rather than the elementes themselves in the queue. This allows us to update the underlying value in constant time. We still must rebalance the heap after, taking O(logn) time.
+
+A python library that allows me to do this is dictheap. Dictheap allows for easy access to and change of the value of an item in the heap. Each key can be though of a pointer to its value. Additionally, dictheap automatically rebalances the heap after a value is changed.
+
+One other efficiency I added is that the main loop of dijkstra's runs only until the ending node removed from the heap. Because dijkstra's is greedy, we assume that once it is removed from the minheap, we will not find a shorter path to it. This is because the node removed is currently the one closest to the start. Any other unexplored paths must pass through a node that is further from the. Since we assume all edge weights are positive, any subsequent path to the removed node cannot be shorter than the previously found shortest path. In short, once we remove a node from the heap, it means we've found its shortest path already. Thus, we don't have do any more calculations. 
+
+In order to track the actual path of the node, we assign each node a "parent" in a dictionary representing the next to last node in the shortest path to this node. In my implementation, this is originally null. When we find a new shortest distance from a node, in addition to updating the distance, we will set this node's parent to whichever node the edge came from. One dijkstra's main loop runs to completion, we can iterate up through the parents from the end node to find the path.
+
+If you were to do this to a normal list, the run time would be O(n^2). This is because we must add the parent to the head of the list, which takes O(n) instead of O(1). The reason is that when adding to the head of an index-based list, we must update the index of all other things in the list whereas when we add to the tail, we don't need to update any other indices. We add to the head at most n times if every node is taken to get from the start to the end. 
+
+In order to circumvent this, I used a stack. A stack is a LIFO data structure where the last thing you added to the list is the first thing that comes out when you remove. The add or "put" function of the stack is O(1), The remove or "pop" function of the stack is O(1). We call each up to n times if all n nodes are included in the path. Thus, we can add the parents to the stack as we bubble up and then remove them all in reverse order in O(n) time. 
+
+Lastly, the end node must be added to the end of the reversed list. A picture of my code is shown below:
+
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dijk-code.png)
+
+In addition to this, I tested my code against NetworkX's built-in shortest path function and graphed the graph using matplotlib to make sure this made logical sense. I ran 1000 tests at a time and used python's "assert" keyword to determine that the lists contents were equal.
+
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/matplotlib-screenshot.png)
+
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dgraph2.png)
+
+I also tested the runtime of my code against the built in function to determine how efficient. Over a series of 1000 run tests, my implementation is approximately 3.5 times slower than the NetworkX one. This may be due to inefficiencies in the libraries I used, missed optimizations, and python inefficiencies if NetworkX uses a different underlying language.
+
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/dtimetest.png)
+
+![3d tests](https://github.com/AlecTraas/computational-geo-lab/blob/main/Colab/Ridge/pictures/week10/time2.png)
+
+
