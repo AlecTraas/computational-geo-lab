@@ -140,3 +140,10 @@ Throughout this week, I focused on adjusting various definitions within the code
 
 <img width="834" alt="截屏2024-04-17 下午4 27 34" src="https://github.com/AlecTraas/computational-geo-lab/assets/97414774/7cfb886d-d5c5-451f-a8f5-5cf114fbdd59">
 
+## Ending (4/17-4/27)
+
+On April 27th, we gathered at the Farmer's Market to introduce locals to the work we've been doing this semester.
+It has been an incredibly rewarding experience collaborating with Alec, Lam, and getting to know our other lab mates. It feels good to doing one thing together with others both individually and sometimes discuss with each other. 
+
+
+
