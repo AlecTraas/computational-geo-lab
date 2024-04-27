@@ -143,7 +143,4 @@ Throughout this week, I focused on adjusting various definitions within the code
 ## Ending (4/17-4/27)
 
 On April 27th, we gathered at the Farmer's Market to introduce locals to the work we've been doing this semester.
-It has been an incredibly rewarding experience collaborating with Alec, Lam, and getting to know our other lab mates. It feels good to doing one thing together with others both individually and sometimes discuss with each other. 
-
-
-
+It has been an incredibly rewarding experience collaborating with Alec, Lam, and getting to know our other lab mates. The opportunity to tackle projects both individually and through group discussions fostered a sense of unity and allowed us to leverage our collective strengths.
