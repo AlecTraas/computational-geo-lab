@@ -189,3 +189,6 @@ c = \frac{a}{||a||^2}
 ```math
 (x-o_x)^2+(y-o_y)^2=\text{dist($a,o$)}^2
 ```
+
+## Concluding Thoughts
+I have enjoyed the UVA Geometry Lab immensely. Through collective struggle and learning, our group has grown not only as colleagues but as friends. If I were to change anything about GeoLab, I would encourage future mentors to facilitate more group-oriented projects. In doing so, I believe the process of learning and implementing new mathematical concepts could be made less of a solitary endeavor. That said, our mentors Alec and Lam were amazing and extremely helpful in guiding us towards a better understanding of computational geometry. As a 10th grade high school student, I never felt singled out or discriminated against for being so much younger than everyone else. This lab had been the first time in my life that I'd met people who share my enthusiasm for math, and I appriciate everyone who let me participate dispite the unusual circumstances. 
