@@ -118,4 +118,6 @@ When actually comparing the output of pagerank algorithms of all three, I found 
 ## Reflection
 
 
-Overall, I really enjoyed my time working in the computational geometry group! I found my favorite parts of working through these materials was when we all were collaborating with one another as a group, as we did in our first meeting in our discussion of convex hulls, or the meeting we introduced the dijkstra's algorithm. 
+Overall, I really enjoyed my time working in the computational geometry group! I found my favorite parts were when we all were collaborating with one another as a group towards solving a problem, as we did in our first meeting in our discussion of convex hulls, or the meeting we introduced the dijkstra's algorithm. Although I really enjoyed working through the PageRank algorithm this semester, in the future I would recommend focusing on group collaboration projects rather than capstone-oriented study. 
+
+
