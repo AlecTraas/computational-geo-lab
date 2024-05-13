@@ -119,6 +119,6 @@ When actually comparing the output of pagerank algorithms of all three, I found 
 
 Overall, I really enjoyed my time working in the computational geometry group! I found my favorite parts were when we all were collaborating with one another as a group towards solving a problem, as we did in our first meeting in our discussion of convex hulls, or the meeting we introduced the dijkstra's algorithm. Although I really enjoyed working through the PageRank algorithm this semester, in the future I would recommend focusing on group collaboration projects rather than capstone-oriented study. While it was interesting hearing about what other people were doing, I felt somewhat disconnected from others when we would go on our individual paths in what kind of project we were pursuing during the backend of the semester. 
 
-
+I would like to thank our group mentors, Alec and Lam, for making this lab such a great and welcoming environment throughout this semester. I would also like to thank the group members, Kai, Ridge, Mitansh, and Anna for being so easy to talk to and willing to help me through thick and thin. It was such a pleasure learning and discussing with others who share a similar passion for mathematics, and this experience has been invaluable for my own growth as a mathematician. 
 
 
