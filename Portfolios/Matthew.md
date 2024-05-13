@@ -114,3 +114,8 @@ This week I wrapped up my work on implementing the pagerank algorithm as a stoch
 
 When actually comparing the output of pagerank algorithms of all three, I found that there wasn't actually that much of a difference between them. The linear algebra approach was the closest to the networkX pagerank algorithm though.
 
+
+## Reflection
+
+
+Overall, I really enjoyed my time working in the computational geometry group! I found my favorite parts of working through these materials was when we all were collaborating with one another as a group, as we did in our first meeting in our discussion of convex hulls, or the meeting we introduced the dijkstra's algorithm. 
